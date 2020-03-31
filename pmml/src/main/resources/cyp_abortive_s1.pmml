@@ -1,0 +1,1897 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PMML xmlns="http://www.dmg.org/PMML-4_3" xmlns:data="http://jpmml.org/jpmml-model/InlineTable" version="4.3">
+	<Header>
+		<Application name="JPMML-SkLearn" version="1.5.8"/>
+		<Timestamp>2019-10-24T09:03:10Z</Timestamp>
+	</Header>
+	<DataDictionary>
+		<DataField name="label_first" optype="categorical" dataType="integer">
+			<Value value="0"/>
+			<Value value="1"/>
+		</DataField>
+		<DataField name="car_info.a.isauthentication_40" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.isauthentication_50" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.ranklevel_35" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.ranklevel_50" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.ranklevel_65" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.ranklevel_80" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.ranklevel_90" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.ranklevel_95" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.rankdesc_A" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.rankdesc_B" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.rankdesc_C" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.rankdesc_D" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.purpose_0" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.purpose_10" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.purpose_100" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.purpose_20" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.purpose_30" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.purpose_40" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.purpose_50" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.purpose_70" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.complementtag_2" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.drivemode_两驱" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.drivemode_四驱" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.isaccident_2" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.isblister_False" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.isfirecar_0" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.iswatercar_0" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.is_outland_trans_0" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.is_outland_trans_1" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.is_stok_car_0" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.is_stok_car_1" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.is_high_accelerate_否" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.is_high_accelerate_是" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.is_low_oil_否" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.is_low_oil_是" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.is_big_normal_否" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.is_big_normal_是" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_space_一般" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_space_好" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_space_差或很差" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_space_很好" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_space_较差" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_power_一般" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_power_好" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_power_差或很差" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_power_很好" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_power_较差" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_control_一般" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_control_好" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_control_差或很差" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_control_很好" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_control_较差" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_fuel_一般" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_fuel_好" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_fuel_差或很差" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_fuel_很好" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_fuel_较差" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_comfortable_一般" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_comfortable_好" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_comfortable_差或很差" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_comfortable_很好" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_comfortable_较差" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_exterior_一般" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_exterior_好" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_exterior_差或很差" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_exterior_很好" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_exterior_较差" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_trim_一般" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_trim_好" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_trim_差或很差" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_trim_很好" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_trim_较差" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_price_一般" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_price_好" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_price_差或很差" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_price_很好" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.rate_price_较差" optype="continuous" dataType="double"/>
+		<DataField name="car_info.level_new_MPV" optype="continuous" dataType="double"/>
+		<DataField name="car_info.level_new_中型车" optype="continuous" dataType="double"/>
+		<DataField name="car_info.level_new_中大型车" optype="continuous" dataType="double"/>
+		<DataField name="car_info.level_new_大型车" optype="continuous" dataType="double"/>
+		<DataField name="car_info.level_new_客车" optype="continuous" dataType="double"/>
+		<DataField name="car_info.level_new_小型车" optype="continuous" dataType="double"/>
+		<DataField name="car_info.level_new_微卡" optype="continuous" dataType="double"/>
+		<DataField name="car_info.level_new_微型车" optype="continuous" dataType="double"/>
+		<DataField name="car_info.level_new_皮卡" optype="continuous" dataType="double"/>
+		<DataField name="car_info.level_new_紧凑型" optype="continuous" dataType="double"/>
+		<DataField name="car_info.level_new_货车" optype="continuous" dataType="double"/>
+		<DataField name="car_info.level_new_跑车" optype="continuous" dataType="double"/>
+		<DataField name="car_info.vehicle_type_MPV" optype="continuous" dataType="double"/>
+		<DataField name="car_info.vehicle_type_SUV" optype="continuous" dataType="double"/>
+		<DataField name="car_info.vehicle_type_客车" optype="continuous" dataType="double"/>
+		<DataField name="car_info.vehicle_type_皮卡" optype="continuous" dataType="double"/>
+		<DataField name="car_info.vehicle_type_货车" optype="continuous" dataType="double"/>
+		<DataField name="car_info.vehicle_type_跑车" optype="continuous" dataType="double"/>
+		<DataField name="car_info.vehicle_type_轿车" optype="continuous" dataType="double"/>
+		<DataField name="car_info.accelerate_compare_一般" optype="continuous" dataType="double"/>
+		<DataField name="car_info.accelerate_compare_优秀" optype="continuous" dataType="double"/>
+		<DataField name="car_info.accelerate_compare_良好" optype="continuous" dataType="double"/>
+		<DataField name="car_info.accelerate_compare_较差" optype="continuous" dataType="double"/>
+		<DataField name="car_info.fuel_compare_一般" optype="continuous" dataType="double"/>
+		<DataField name="car_info.fuel_compare_优秀" optype="continuous" dataType="double"/>
+		<DataField name="car_info.fuel_compare_良好" optype="continuous" dataType="double"/>
+		<DataField name="car_info.fuel_compare_较差" optype="continuous" dataType="double"/>
+		<DataField name="car_info.is_high75equip_0.0" optype="continuous" dataType="double"/>
+		<DataField name="car_info.is_high75equip_1.0" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.actionmode_快拍" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.actionmode_易拍" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.actionmode_随时拍" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.carlocation_bin_其他" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.carlocation_bin_北京" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.carlocation_bin_天津" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.carlocation_bin_成都" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.carlocation_bin_杭州" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.color_process_常规颜色" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.color_process_比较常规颜色" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.color_process_灰/银" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.color_process_非常规颜色" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.color_process_黑/白" optype="continuous" dataType="double"/>
+		<DataField name="car_info.regarea_is_equal_一致" optype="continuous" dataType="double"/>
+		<DataField name="car_info.carlocation_is_equal_一致" optype="continuous" dataType="double"/>
+		<DataField name="car_info.carlocation_is_equal_不一致" optype="continuous" dataType="double"/>
+		<DataField name="car_info.seller_carlocation_is_equal_一致" optype="continuous" dataType="double"/>
+		<DataField name="car_info.seller_carlocation_is_equal_不一致" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.country_process_0" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.country_process_1" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.country_process_2" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.country_process_3" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.country_process_5" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.country_process_6" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.gear_box_type_process_AMT" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.gear_box_type_process_AT" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.gear_box_type_process_CVT" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.gear_box_type_process_DCT" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.gear_box_type_process_MT" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.gear_box_type_process_其他" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.intake_type_process_涡轮增压" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.intake_type_process_自然吸气" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.environmental_standards_process_国II" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.environmental_standards_process_国III" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.environmental_standards_process_国IV" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.environmental_standards_process_国I及以下" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.environmental_standards_process_国V" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.environmental_standards_process_国VI" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.fuel_form_standards_process_2" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.fuel_form_standards_process_3" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.fuel_form_standards_process_5" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.fuel_form_standards_process_6" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.fuel_form_standards_process_7" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.gear_box_process_2" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.gear_box_process_3" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.import_type_process_1" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.import_type_process_2" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.import_type_process_3" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.import_type_process_4" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.gender_0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.gender_1" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.is_xiaoquan_0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.is_xiaoquan_1" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.isauthenticate_0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.isauthenticate_1" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.user_attribute_00974" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.user_attribute_02272" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.user_attribute_大域" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.user_attribute_小圈" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.is_chongbao_0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.is_chongbao_01398" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.is_chongbao_1" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.is_chongbao_四川" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.is_chujia_0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.is_chujia_1" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.is_chujia_大域" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.is_chujia_浙江" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.is_chengjiao_0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.is_chengjiao_1" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.is_liulan_365_0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.is_liulan_365_1" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.is_chengjiao_365_0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.is_chengjiao_365_1" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.is_liulan_0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.is_liulan_1" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.is_first_chengjiao_7_0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.is_first_chengjiao_7_1" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.inputsource_1.0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.inputsource_2.0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.inputsource_4.0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.inputsource_5.0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.inputsource_7.0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.inputsource_41.0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.inputsource_91.0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.inputsource_92.0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.inputsource_96.0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.buyerlevel_0.0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.buyerlevel_1.0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.buyerlevel_2.0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.buyerlevel_3.0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.buyerlevel_4.0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.c.begintime_first_weekday_星期一" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.c.begintime_first_weekday_星期三" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.c.begintime_first_weekday_星期二" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.c.begintime_first_weekday_星期五" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.c.begintime_first_weekday_星期六" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.c.begintime_first_weekday_星期四" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.c.begintime_first_weekday_星期天" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.c.begintime_first_hourbin_0~6h" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.c.begintime_first_hourbin_10~12h" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.c.begintime_first_hourbin_12~14h" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.c.begintime_first_hourbin_14~17h" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.c.begintime_first_hourbin_17~20h" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.c.begintime_first_hourbin_20~22h" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.c.begintime_first_hourbin_22~24h" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.c.begintime_first_hourbin_6~8h" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.c.begintime_first_hourbin_8~10h" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.rankleveldesc_35B" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.rankleveldesc_35C" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.rankleveldesc_35D" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.rankleveldesc_50A" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.rankleveldesc_50B" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.rankleveldesc_50C" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.rankleveldesc_50D" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.rankleveldesc_65A" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.rankleveldesc_65B" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.rankleveldesc_65C" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.rankleveldesc_65D" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.rankleveldesc_80A" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.rankleveldesc_80B" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.rankleveldesc_80C" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.rankleveldesc_80D" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.rankleveldesc_90A" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.rankleveldesc_95A" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.rankleveldesc_95B" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.sweptvolume_process_1.0~1.5" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.sweptvolume_process_1.5~2.0" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.sweptvolume_process_2.0~2.5" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.sweptvolume_process_2.5~3.0" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.sweptvolume_process_&lt;1.0" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.sweptvolume_process_&gt;3.0" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.car_age_process_1~3" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.car_age_process_3~6" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.car_age_process_6~10" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.car_age_process_&lt;1" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.car_age_process_&gt;10" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.mileage_process_10~15" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.mileage_process_15~25" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.mileage_process_25~50" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.mileage_process_2~5" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.mileage_process_5~10" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.mileage_process_&lt;2" optype="continuous" dataType="double"/>
+		<DataField name="car_info.car_age_and_mileage_age1~3&amp;mileage10~15" optype="continuous" dataType="double"/>
+		<DataField name="car_info.car_age_and_mileage_age1~3&amp;mileage15~25" optype="continuous" dataType="double"/>
+		<DataField name="car_info.car_age_and_mileage_age1~3&amp;mileage25~50" optype="continuous" dataType="double"/>
+		<DataField name="car_info.car_age_and_mileage_age1~3&amp;mileage2~5" optype="continuous" dataType="double"/>
+		<DataField name="car_info.car_age_and_mileage_age1~3&amp;mileage5~10" optype="continuous" dataType="double"/>
+		<DataField name="car_info.car_age_and_mileage_age1~3&amp;mileage&lt;2" optype="continuous" dataType="double"/>
+		<DataField name="car_info.car_age_and_mileage_age3~6&amp;mileage10~15" optype="continuous" dataType="double"/>
+		<DataField name="car_info.car_age_and_mileage_age3~6&amp;mileage15~25" optype="continuous" dataType="double"/>
+		<DataField name="car_info.car_age_and_mileage_age3~6&amp;mileage25~50" optype="continuous" dataType="double"/>
+		<DataField name="car_info.car_age_and_mileage_age3~6&amp;mileage2~5" optype="continuous" dataType="double"/>
+		<DataField name="car_info.car_age_and_mileage_age3~6&amp;mileage5~10" optype="continuous" dataType="double"/>
+		<DataField name="car_info.car_age_and_mileage_age3~6&amp;mileage&lt;2" optype="continuous" dataType="double"/>
+		<DataField name="car_info.car_age_and_mileage_age6~10&amp;mileage10~15" optype="continuous" dataType="double"/>
+		<DataField name="car_info.car_age_and_mileage_age6~10&amp;mileage15~25" optype="continuous" dataType="double"/>
+		<DataField name="car_info.car_age_and_mileage_age6~10&amp;mileage25~50" optype="continuous" dataType="double"/>
+		<DataField name="car_info.car_age_and_mileage_age6~10&amp;mileage2~5" optype="continuous" dataType="double"/>
+		<DataField name="car_info.car_age_and_mileage_age6~10&amp;mileage5~10" optype="continuous" dataType="double"/>
+		<DataField name="car_info.car_age_and_mileage_age6~10&amp;mileage&lt;2" optype="continuous" dataType="double"/>
+		<DataField name="car_info.car_age_and_mileage_age&lt;1&amp;mileage2~5" optype="continuous" dataType="double"/>
+		<DataField name="car_info.car_age_and_mileage_age&lt;1&amp;mileage5~10" optype="continuous" dataType="double"/>
+		<DataField name="car_info.car_age_and_mileage_age&lt;1&amp;mileage&lt;2" optype="continuous" dataType="double"/>
+		<DataField name="car_info.car_age_and_mileage_age&gt;10&amp;mileage10~15" optype="continuous" dataType="double"/>
+		<DataField name="car_info.car_age_and_mileage_age&gt;10&amp;mileage15~25" optype="continuous" dataType="double"/>
+		<DataField name="car_info.car_age_and_mileage_age&gt;10&amp;mileage25~50" optype="continuous" dataType="double"/>
+		<DataField name="car_info.car_age_and_mileage_age&gt;10&amp;mileage2~5" optype="continuous" dataType="double"/>
+		<DataField name="car_info.car_age_and_mileage_age&gt;10&amp;mileage5~10" optype="continuous" dataType="double"/>
+		<DataField name="car_info.car_age_and_mileage_age&gt;10&amp;mileage&lt;2" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.tradetimes_bin_ &lt;= 0" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.tradetimes_bin_ &gt; 0" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.site_num_bin_ &lt;= 2" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.site_num_bin_2~4" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.site_num_bin_&gt;4" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.engine_volume_bin_ &lt;= 1598" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.engine_volume_bin_1598~1991" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.engine_volume_bin_&gt;1991" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.length_bin_ &lt;= 4530" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.length_bin_4530~4670" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.length_bin_&gt;4670" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.width_bin_ &lt;= 1773" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.width_bin_1773~1820" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.width_bin_&gt;1820" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.height_bin_ &lt;= 1480" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.height_bin_1480~1530" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.height_bin_&gt;1530" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.official_oil_wear_bin_ &lt;= 7" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.official_oil_wear_bin_7~8" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.official_oil_wear_bin_&gt;8" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_ &lt;= 2500000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_10000000~12500000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_12500000~15000000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_15000000~20000000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_20000000~25000000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_25000000~30000000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_2500000~5000000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_30000000~35000000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_35000000~40000000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_40000000~50000000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_50000000~60000000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_5000000~7500000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_7500000~10000000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_&gt;60000000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.first_year_keepvalue_bin_ &lt;= 0.65" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.first_year_keepvalue_bin_0.65~0.754" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.first_year_keepvalue_bin_&gt;0.754" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.third_year_keepvalue_bin_ &lt;= 0.49" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.third_year_keepvalue_bin_0.49~0.6" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.third_year_keepvalue_bin_&gt;0.6" optype="continuous" dataType="double"/>
+		<DataField name="car_info.dljc_ss_bin_ &lt;= 0" optype="continuous" dataType="double"/>
+		<DataField name="car_info.wgjc_bx_bin_ &lt;= 7" optype="continuous" dataType="double"/>
+		<DataField name="car_info.wgjc_bx_bin_7~13" optype="continuous" dataType="double"/>
+		<DataField name="car_info.wgjc_bx_bin_&gt;13" optype="continuous" dataType="double"/>
+		<DataField name="car_info.wgjc_gc_bin_ &lt;= 11" optype="continuous" dataType="double"/>
+		<DataField name="car_info.wgjc_gc_bin_11~17" optype="continuous" dataType="double"/>
+		<DataField name="car_info.wgjc_gc_bin_&gt;17" optype="continuous" dataType="double"/>
+		<DataField name="car_info.wgjc_hh_bin_ &lt;= 7" optype="continuous" dataType="double"/>
+		<DataField name="car_info.wgjc_hh_bin_7~12" optype="continuous" dataType="double"/>
+		<DataField name="car_info.wgjc_hh_bin_&gt;12" optype="continuous" dataType="double"/>
+		<DataField name="car_info.wgjc_czq_bin_ &lt;= 0" optype="continuous" dataType="double"/>
+		<DataField name="car_info.wgjc_czq_bin_0~6" optype="continuous" dataType="double"/>
+		<DataField name="car_info.wgjc_czq_bin_6~16" optype="continuous" dataType="double"/>
+		<DataField name="car_info.wgjc_czq_bin_&gt;16" optype="continuous" dataType="double"/>
+		<DataField name="car_info.cnjc_ms_ps_bin_ &lt;= 6" optype="continuous" dataType="double"/>
+		<DataField name="car_info.cnjc_ms_ps_bin_6~10" optype="continuous" dataType="double"/>
+		<DataField name="car_info.cnjc_ms_ps_bin_&gt;10" optype="continuous" dataType="double"/>
+		<DataField name="car_info.cnjc_hh_bin_ &lt;= 2" optype="continuous" dataType="double"/>
+		<DataField name="car_info.cnjc_hh_bin_2~5" optype="continuous" dataType="double"/>
+		<DataField name="car_info.cnjc_hh_bin_&gt;5" optype="continuous" dataType="double"/>
+		<DataField name="car_info.model_order_num_pre180_bin_ &lt;= 3" optype="continuous" dataType="double"/>
+		<DataField name="car_info.model_order_num_pre180_bin_3~9" optype="continuous" dataType="double"/>
+		<DataField name="car_info.model_order_num_pre180_bin_9~20" optype="continuous" dataType="double"/>
+		<DataField name="car_info.model_order_num_pre180_bin_&gt;20" optype="continuous" dataType="double"/>
+		<DataField name="car_info.model_bids_num_pre180_bin_ &lt;= 100" optype="continuous" dataType="double"/>
+		<DataField name="car_info.model_bids_num_pre180_bin_100~300" optype="continuous" dataType="double"/>
+		<DataField name="car_info.model_bids_num_pre180_bin_300~700" optype="continuous" dataType="double"/>
+		<DataField name="car_info.model_bids_num_pre180_bin_&gt;700" optype="continuous" dataType="double"/>
+		<DataField name="car_info.model_order_bids_rate_pre180_bin_ &lt;= 0.029" optype="continuous" dataType="double"/>
+		<DataField name="car_info.model_order_bids_rate_pre180_bin_0.029~0.045" optype="continuous" dataType="double"/>
+		<DataField name="car_info.model_order_bids_rate_pre180_bin_&gt;0.045" optype="continuous" dataType="double"/>
+		<DataField name="car_info.series_order_num_pre180_bin_ &lt;= 50" optype="continuous" dataType="double"/>
+		<DataField name="car_info.series_order_num_pre180_bin_150~300" optype="continuous" dataType="double"/>
+		<DataField name="car_info.series_order_num_pre180_bin_50~150" optype="continuous" dataType="double"/>
+		<DataField name="car_info.series_order_num_pre180_bin_&gt;300" optype="continuous" dataType="double"/>
+		<DataField name="car_info.series_bids_num_pre180_bin_ &lt;= 1000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.series_bids_num_pre180_bin_1000~4800" optype="continuous" dataType="double"/>
+		<DataField name="car_info.series_bids_num_pre180_bin_4800~12000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.series_bids_num_pre180_bin_&gt;12000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.series_order_bids_rate_pre180_bin_ &lt;= 0.028" optype="continuous" dataType="double"/>
+		<DataField name="car_info.series_order_bids_rate_pre180_bin_0.028~0.042" optype="continuous" dataType="double"/>
+		<DataField name="car_info.series_order_bids_rate_pre180_bin_&gt;0.042" optype="continuous" dataType="double"/>
+		<DataField name="car_info.model_order_num_pre15_bin_未知" optype="continuous" dataType="double"/>
+		<DataField name="car_info.model_order_num_pre15_diff_bin_未知" optype="continuous" dataType="double"/>
+		<DataField name="car_info.series_order_num_pre15_bin_未知" optype="continuous" dataType="double"/>
+		<DataField name="car_info.series_order_num_pre15_diff_bin_未知" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.publishyear_delta_bin_ &lt;= 2" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.publishyear_delta_bin_2~3" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.publishyear_delta_bin_&gt;3" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.insureexpired_diffdays_bin_ &lt;= 114" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.insureexpired_diffdays_bin_114~226" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.insureexpired_diffdays_bin_&gt;226" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.inspectexpired_diffdays_bin_ &lt;= 144" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.inspectexpired_diffdays_bin_144~260" optype="continuous" dataType="double"/>
+		<DataField name="car_info.a.inspectexpired_diffdays_bin_&gt;260" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.twoyear_residual_ratio_bin_ &lt;= 0.07" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.twoyear_residual_ratio_bin_ &gt; 0.07" optype="continuous" dataType="double"/>
+		<DataField name="car_info.dealerBuyResidual_bin_未知" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.unpurchased_days_bin_ &lt;= 298" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.unpurchased_days_bin_298~314" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.unpurchased_days_bin_&gt;314" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.open_cyp_app_7_bin_ &lt;= 0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.open_cyp_app_7_bin_ &gt; 0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.open_cyp_app_30_bin_ &lt;= 0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.open_cyp_app_30_bin_ &gt; 0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.d1.buy_num_his_bin_ &lt;= 8" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.d1.buy_num_his_bin_8~12" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.d1.buy_num_his_bin_&gt;12" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.d1.buy_num_pre30_bin_ &lt;= 0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.d2.seller_num_his_bin_ &lt;= 100" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.d2.seller_num_his_bin_100~400" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.d2.seller_num_his_bin_400~800" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.d2.seller_num_his_bin_800~1100" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.d2.seller_num_his_bin_&gt;1100" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.d2.seller_num_pre30_bin_ &lt;= 30" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.d2.seller_num_pre30_bin_30~88" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.d2.seller_num_pre30_bin_&gt;88" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.e.xinli_price_bin_ &lt;= 38000" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.e.xinli_price_bin_38000~69100" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.e.xinli_price_bin_&gt;69100" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.e.qipai_price_bin_ &lt;= 7000" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.e.qipai_price_bin_15000~30000" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.e.qipai_price_bin_7000~15000" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.e.qipai_price_bin_&gt;30000" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.e.baoliu_price_bin_ &lt;= 25000" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.e.baoliu_price_bin_100000~125000" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.e.baoliu_price_bin_125000~150000" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.e.baoliu_price_bin_150000~200000" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.e.baoliu_price_bin_200000~250000" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.e.baoliu_price_bin_250000~300000" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.e.baoliu_price_bin_25000~50000" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.e.baoliu_price_bin_300000~350000" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.e.baoliu_price_bin_350000~400000" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.e.baoliu_price_bin_400000~500000" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.e.baoliu_price_bin_500000~600000" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.e.baoliu_price_bin_50000~75000" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.e.baoliu_price_bin_75000~100000" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.e.baoliu_price_bin_&gt;600000" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.registdate_diffdays_bin_ &lt;= -1" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.registdate_diffdays_bin_-1~0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.registdate_diffdays_bin_0~90" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.registdate_diffdays_bin_180~365" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.registdate_diffdays_bin_365~730" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.registdate_diffdays_bin_730~1095" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.registdate_diffdays_bin_90~180" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.b.registdate_diffdays_bin_&gt;1095" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.e.service_price_bin_ &lt;= 0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.e.service_price_bin_0~1000" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.e.service_price_bin_&gt;1000" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.f.seller_auction_cyp_num_bin_ &lt;= 1366" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.f.seller_auction_cyp_num_bin_1366~3354" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.f.seller_auction_cyp_num_bin_&gt;3354" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.f.seller_auction_cyp_deal_num_bin_ &lt;= 824" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.f.seller_auction_cyp_deal_num_bin_824~1939" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.f.seller_auction_cyp_deal_num_bin_&gt;1939" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.f.seller_auction_cyp_up_price_num_bin_ &lt;= 2855" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.f.seller_auction_cyp_up_price_num_bin_2855~8129" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.f.seller_auction_cyp_up_price_num_bin_&gt;8129" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.f.seller_auction_cyp_up_price_seller_break_num_bin_ &lt;= 2" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.f.seller_auction_cyp_up_price_seller_break_num_bin_2~7" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.f.seller_auction_cyp_up_price_seller_break_num_bin_&gt;7" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.f.seller_auction_cyp_deal_seller_break_num_bin_ &lt;= 0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.f.seller_auction_cyp_deal_seller_break_num_bin_ &gt; 0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.f.seller_auction_cyp_deal_ratio_bin_ &lt;= 0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.f.seller_auction_cyp_deal_ratio_bin_ &gt; 0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.f.seller_auction_cyp_up_price_ratio_bin_ &lt;= 2" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.f.seller_auction_cyp_up_price_ratio_bin_2~3" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.f.seller_auction_cyp_up_price_ratio_bin_&gt;3" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.f.seller_auction_cyp_up_price_seller_break_ratio_bin_ &lt;= 0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.f.seller_auction_cyp_up_price_seller_break_ratio_bin_ &gt; 0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.f.seller_auction_cyp_deal_seller_break_ratio_bin_ &lt;= 0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.f.seller_auction_cyp_deal_seller_break_ratio_bin_ &gt; 0" optype="continuous" dataType="double"/>
+		<DataField name="car_info.dealerRes_buy_rate_bin_未知" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.e.baoliu_price_dealer_buy_bin_未知" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.e.baoliu_price_dealer_buy_diffrate_bin_未知" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.balance_user_num_bin_ &lt;= 0" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.balance_user_num_bin_0~5" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.balance_user_num_bin_10~15" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.balance_user_num_bin_5~10" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.balance_user_num_bin_&gt;15" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.view_user_num_pre7_bin_ &lt;= 0" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.view_user_num_pre7_bin_0~50" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.view_user_num_pre7_bin_50~100" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.view_num_pre7_bin_ &lt;= 0" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.view_num_pre7_bin_0~1500" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.view_num_pre7_bin_1500~4500" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.view_num_pre7_bin_&gt;4500" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.view_user_num_mean_pre7_bin_ &lt;= -0.25" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.view_user_num_mean_pre7_bin_-0.25~0.0" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.view_user_num_mean_pre7_bin_0.0~0.25" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.view_user_num_mean_pre7_bin_&gt;0.25" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.focus_user_car_num_pre7_bin_ &lt;= -150" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.focus_user_car_num_pre7_bin_-150~0" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.focus_user_car_num_pre7_bin_0~80" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.focus_user_car_num_pre7_bin_&gt;80" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.focus_user_num_pre7_bin_ &lt;= 0" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.focus_user_num_pre7_bin_0~10" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.focus_user_num_pre7_bin_&gt;10" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.user_bids_num_pre7_bin_ &lt;= -1500" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.user_bids_num_pre7_bin_-1500~0" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.user_bids_num_pre7_bin_0~1500" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.user_bids_num_pre7_bin_&gt;1500" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.bid_user_num_pre7_bin_ &lt;= 0" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.bid_user_num_pre7_bin_0~5" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.bid_user_num_pre7_bin_5~15" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.bid_user_num_pre7_bin_&gt;15" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.order_num_pre7_bin_ &lt;= -50" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.order_num_pre7_bin_-50~0" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.order_num_pre7_bin_0~30" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.order_num_pre7_bin_&gt;30" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.order_num_mean_pre7_bin_ &lt;= -0.03" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.order_num_mean_pre7_bin_-0.03~0.0" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.order_num_mean_pre7_bin_0.0~0.03" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.order_num_mean_pre7_bin_&gt;0.03" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.user_bids_num_mean_pre7_bin_ &lt;= 37" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.user_bids_num_mean_pre7_bin_37~39" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.user_bids_num_mean_pre7_bin_&gt;39" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.order_user_bids_num_pre7_rate_bin_ &lt;= 0.0085" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.order_user_bids_num_pre7_rate_bin_ &gt; 0.0085" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.bids_view_num_pre7_rate_bin_ &lt;= 0.16" optype="continuous" dataType="double"/>
+		<DataField name="platform_info.bids_view_num_pre7_rate_bin_ &gt; 0.16" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_ &lt;= 2500000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_10000000~12500000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_10000000~12500000 &amp; seller_info.e.baoliu_price_bin_100000~125000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_10000000~12500000 &amp; seller_info.e.baoliu_price_bin_125000~150000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_10000000~12500000 &amp; seller_info.e.baoliu_price_bin_150000~200000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_10000000~12500000 &amp; seller_info.e.baoliu_price_bin_25000~50000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_10000000~12500000 &amp; seller_info.e.baoliu_price_bin_50000~75000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_10000000~12500000 &amp; seller_info.e.baoliu_price_bin_75000~100000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_12500000~15000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_12500000~15000000 &amp; seller_info.e.baoliu_price_bin_100000~125000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_12500000~15000000 &amp; seller_info.e.baoliu_price_bin_125000~150000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_12500000~15000000 &amp; seller_info.e.baoliu_price_bin_150000~200000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_12500000~15000000 &amp; seller_info.e.baoliu_price_bin_200000~250000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_12500000~15000000 &amp; seller_info.e.baoliu_price_bin_25000~50000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_12500000~15000000 &amp; seller_info.e.baoliu_price_bin_50000~75000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_12500000~15000000 &amp; seller_info.e.baoliu_price_bin_75000~100000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_15000000~20000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_15000000~20000000 &amp; seller_info.e.baoliu_price_bin_100000~125000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_15000000~20000000 &amp; seller_info.e.baoliu_price_bin_125000~150000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_15000000~20000000 &amp; seller_info.e.baoliu_price_bin_150000~200000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_15000000~20000000 &amp; seller_info.e.baoliu_price_bin_200000~250000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_15000000~20000000 &amp; seller_info.e.baoliu_price_bin_250000~300000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_15000000~20000000 &amp; seller_info.e.baoliu_price_bin_25000~50000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_15000000~20000000 &amp; seller_info.e.baoliu_price_bin_50000~75000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_15000000~20000000 &amp; seller_info.e.baoliu_price_bin_75000~100000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_20000000~25000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_20000000~25000000 &amp; seller_info.e.baoliu_price_bin_100000~125000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_20000000~25000000 &amp; seller_info.e.baoliu_price_bin_125000~150000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_20000000~25000000 &amp; seller_info.e.baoliu_price_bin_150000~200000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_20000000~25000000 &amp; seller_info.e.baoliu_price_bin_200000~250000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_20000000~25000000 &amp; seller_info.e.baoliu_price_bin_250000~300000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_20000000~25000000 &amp; seller_info.e.baoliu_price_bin_25000~50000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_20000000~25000000 &amp; seller_info.e.baoliu_price_bin_50000~75000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_20000000~25000000 &amp; seller_info.e.baoliu_price_bin_75000~100000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_20000000~25000000 &amp; seller_info.e.baoliu_price_bin_&gt;600000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_100000~125000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_125000~150000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_150000~200000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_200000~250000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_250000~300000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_25000~50000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_300000~350000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_50000~75000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_75000~100000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_&gt;600000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_2500000~5000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_2500000~5000000 &amp; seller_info.e.baoliu_price_bin_25000~50000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_2500000~5000000 &amp; seller_info.e.baoliu_price_bin_50000~75000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_30000000~35000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_30000000~35000000 &amp; seller_info.e.baoliu_price_bin_100000~125000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_30000000~35000000 &amp; seller_info.e.baoliu_price_bin_125000~150000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_30000000~35000000 &amp; seller_info.e.baoliu_price_bin_150000~200000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_30000000~35000000 &amp; seller_info.e.baoliu_price_bin_200000~250000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_30000000~35000000 &amp; seller_info.e.baoliu_price_bin_250000~300000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_30000000~35000000 &amp; seller_info.e.baoliu_price_bin_25000~50000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_30000000~35000000 &amp; seller_info.e.baoliu_price_bin_300000~350000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_30000000~35000000 &amp; seller_info.e.baoliu_price_bin_50000~75000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_30000000~35000000 &amp; seller_info.e.baoliu_price_bin_75000~100000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_100000~125000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_125000~150000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_150000~200000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_200000~250000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_250000~300000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_25000~50000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_300000~350000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_350000~400000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_400000~500000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_500000~600000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_50000~75000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_75000~100000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_100000~125000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_125000~150000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_150000~200000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_200000~250000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_250000~300000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_25000~50000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_300000~350000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_350000~400000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_400000~500000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_500000~600000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_50000~75000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_75000~100000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_&gt;600000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_100000~125000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_125000~150000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_150000~200000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_200000~250000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_250000~300000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_25000~50000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_300000~350000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_400000~500000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_500000~600000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_50000~75000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_75000~100000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_&gt;600000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_5000000~7500000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_5000000~7500000 &amp; seller_info.e.baoliu_price_bin_100000~125000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_5000000~7500000 &amp; seller_info.e.baoliu_price_bin_25000~50000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_5000000~7500000 &amp; seller_info.e.baoliu_price_bin_50000~75000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_7500000~10000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_7500000~10000000 &amp; seller_info.e.baoliu_price_bin_100000~125000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_7500000~10000000 &amp; seller_info.e.baoliu_price_bin_25000~50000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_7500000~10000000 &amp; seller_info.e.baoliu_price_bin_300000~350000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_7500000~10000000 &amp; seller_info.e.baoliu_price_bin_50000~75000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_7500000~10000000 &amp; seller_info.e.baoliu_price_bin_75000~100000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_100000~125000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_125000~150000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_150000~200000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_200000~250000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_250000~300000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_25000~50000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_300000~350000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_350000~400000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_400000~500000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_500000~600000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_50000~75000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_75000~100000" optype="continuous" dataType="double"/>
+		<DataField name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_&gt;600000" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.f.seller_auction_cyp_num_bin_ &lt;= 1366 &amp; seller_info.f.seller_auction_cyp_deal_ratio_bin_ &lt;= 0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.f.seller_auction_cyp_num_bin_ &lt;= 1366 &amp; seller_info.f.seller_auction_cyp_deal_ratio_bin_ &gt; 0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.f.seller_auction_cyp_num_bin_1366~3354 &amp; seller_info.f.seller_auction_cyp_deal_ratio_bin_ &gt; 0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.f.seller_auction_cyp_num_bin_&gt;3354 &amp; seller_info.f.seller_auction_cyp_deal_ratio_bin_ &lt;= 0" optype="continuous" dataType="double"/>
+		<DataField name="seller_info.f.seller_auction_cyp_num_bin_&gt;3354 &amp; seller_info.f.seller_auction_cyp_deal_ratio_bin_ &gt; 0" optype="continuous" dataType="double"/>
+	</DataDictionary>
+	<RegressionModel functionName="classification" normalizationMethod="logit">
+		<MiningSchema>
+			<MiningField name="label_first" usageType="target"/>
+			<MiningField name="car_info.a.isauthentication_40"/>
+			<MiningField name="car_info.a.isauthentication_50"/>
+			<MiningField name="car_info.a.ranklevel_35"/>
+			<MiningField name="car_info.a.ranklevel_50"/>
+			<MiningField name="car_info.a.ranklevel_65"/>
+			<MiningField name="car_info.a.ranklevel_80"/>
+			<MiningField name="car_info.a.ranklevel_90"/>
+			<MiningField name="car_info.a.ranklevel_95"/>
+			<MiningField name="car_info.a.rankdesc_A"/>
+			<MiningField name="car_info.a.rankdesc_B"/>
+			<MiningField name="car_info.a.rankdesc_C"/>
+			<MiningField name="car_info.a.rankdesc_D"/>
+			<MiningField name="car_info.a.purpose_0"/>
+			<MiningField name="car_info.a.purpose_10"/>
+			<MiningField name="car_info.a.purpose_100"/>
+			<MiningField name="car_info.a.purpose_20"/>
+			<MiningField name="car_info.a.purpose_30"/>
+			<MiningField name="car_info.a.purpose_40"/>
+			<MiningField name="car_info.a.purpose_50"/>
+			<MiningField name="car_info.a.purpose_70"/>
+			<MiningField name="car_info.a.complementtag_2"/>
+			<MiningField name="car_info.a.drivemode_两驱"/>
+			<MiningField name="car_info.a.drivemode_四驱"/>
+			<MiningField name="car_info.a.isaccident_2"/>
+			<MiningField name="car_info.a.isblister_False"/>
+			<MiningField name="car_info.a.isfirecar_0"/>
+			<MiningField name="car_info.a.iswatercar_0"/>
+			<MiningField name="car_info.a.is_outland_trans_0"/>
+			<MiningField name="car_info.a.is_outland_trans_1"/>
+			<MiningField name="car_info.a.is_stok_car_0"/>
+			<MiningField name="car_info.a.is_stok_car_1"/>
+			<MiningField name="car_info.b.is_high_accelerate_否"/>
+			<MiningField name="car_info.b.is_high_accelerate_是"/>
+			<MiningField name="car_info.b.is_low_oil_否"/>
+			<MiningField name="car_info.b.is_low_oil_是"/>
+			<MiningField name="car_info.b.is_big_normal_否"/>
+			<MiningField name="car_info.b.is_big_normal_是"/>
+			<MiningField name="car_info.b.rate_space_一般"/>
+			<MiningField name="car_info.b.rate_space_好"/>
+			<MiningField name="car_info.b.rate_space_差或很差"/>
+			<MiningField name="car_info.b.rate_space_很好"/>
+			<MiningField name="car_info.b.rate_space_较差"/>
+			<MiningField name="car_info.b.rate_power_一般"/>
+			<MiningField name="car_info.b.rate_power_好"/>
+			<MiningField name="car_info.b.rate_power_差或很差"/>
+			<MiningField name="car_info.b.rate_power_很好"/>
+			<MiningField name="car_info.b.rate_power_较差"/>
+			<MiningField name="car_info.b.rate_control_一般"/>
+			<MiningField name="car_info.b.rate_control_好"/>
+			<MiningField name="car_info.b.rate_control_差或很差"/>
+			<MiningField name="car_info.b.rate_control_很好"/>
+			<MiningField name="car_info.b.rate_control_较差"/>
+			<MiningField name="car_info.b.rate_fuel_一般"/>
+			<MiningField name="car_info.b.rate_fuel_好"/>
+			<MiningField name="car_info.b.rate_fuel_差或很差"/>
+			<MiningField name="car_info.b.rate_fuel_很好"/>
+			<MiningField name="car_info.b.rate_fuel_较差"/>
+			<MiningField name="car_info.b.rate_comfortable_一般"/>
+			<MiningField name="car_info.b.rate_comfortable_好"/>
+			<MiningField name="car_info.b.rate_comfortable_差或很差"/>
+			<MiningField name="car_info.b.rate_comfortable_很好"/>
+			<MiningField name="car_info.b.rate_comfortable_较差"/>
+			<MiningField name="car_info.b.rate_exterior_一般"/>
+			<MiningField name="car_info.b.rate_exterior_好"/>
+			<MiningField name="car_info.b.rate_exterior_差或很差"/>
+			<MiningField name="car_info.b.rate_exterior_很好"/>
+			<MiningField name="car_info.b.rate_exterior_较差"/>
+			<MiningField name="car_info.b.rate_trim_一般"/>
+			<MiningField name="car_info.b.rate_trim_好"/>
+			<MiningField name="car_info.b.rate_trim_差或很差"/>
+			<MiningField name="car_info.b.rate_trim_很好"/>
+			<MiningField name="car_info.b.rate_trim_较差"/>
+			<MiningField name="car_info.b.rate_price_一般"/>
+			<MiningField name="car_info.b.rate_price_好"/>
+			<MiningField name="car_info.b.rate_price_差或很差"/>
+			<MiningField name="car_info.b.rate_price_很好"/>
+			<MiningField name="car_info.b.rate_price_较差"/>
+			<MiningField name="car_info.level_new_MPV"/>
+			<MiningField name="car_info.level_new_中型车"/>
+			<MiningField name="car_info.level_new_中大型车"/>
+			<MiningField name="car_info.level_new_大型车"/>
+			<MiningField name="car_info.level_new_客车"/>
+			<MiningField name="car_info.level_new_小型车"/>
+			<MiningField name="car_info.level_new_微卡"/>
+			<MiningField name="car_info.level_new_微型车"/>
+			<MiningField name="car_info.level_new_皮卡"/>
+			<MiningField name="car_info.level_new_紧凑型"/>
+			<MiningField name="car_info.level_new_货车"/>
+			<MiningField name="car_info.level_new_跑车"/>
+			<MiningField name="car_info.vehicle_type_MPV"/>
+			<MiningField name="car_info.vehicle_type_SUV"/>
+			<MiningField name="car_info.vehicle_type_客车"/>
+			<MiningField name="car_info.vehicle_type_皮卡"/>
+			<MiningField name="car_info.vehicle_type_货车"/>
+			<MiningField name="car_info.vehicle_type_跑车"/>
+			<MiningField name="car_info.vehicle_type_轿车"/>
+			<MiningField name="car_info.accelerate_compare_一般"/>
+			<MiningField name="car_info.accelerate_compare_优秀"/>
+			<MiningField name="car_info.accelerate_compare_良好"/>
+			<MiningField name="car_info.accelerate_compare_较差"/>
+			<MiningField name="car_info.fuel_compare_一般"/>
+			<MiningField name="car_info.fuel_compare_优秀"/>
+			<MiningField name="car_info.fuel_compare_良好"/>
+			<MiningField name="car_info.fuel_compare_较差"/>
+			<MiningField name="car_info.is_high75equip_0.0"/>
+			<MiningField name="car_info.is_high75equip_1.0"/>
+			<MiningField name="car_info.a.actionmode_快拍"/>
+			<MiningField name="car_info.a.actionmode_易拍"/>
+			<MiningField name="car_info.a.actionmode_随时拍"/>
+			<MiningField name="car_info.a.carlocation_bin_其他"/>
+			<MiningField name="car_info.a.carlocation_bin_北京"/>
+			<MiningField name="car_info.a.carlocation_bin_天津"/>
+			<MiningField name="car_info.a.carlocation_bin_成都"/>
+			<MiningField name="car_info.a.carlocation_bin_杭州"/>
+			<MiningField name="car_info.a.color_process_常规颜色"/>
+			<MiningField name="car_info.a.color_process_比较常规颜色"/>
+			<MiningField name="car_info.a.color_process_灰/银"/>
+			<MiningField name="car_info.a.color_process_非常规颜色"/>
+			<MiningField name="car_info.a.color_process_黑/白"/>
+			<MiningField name="car_info.regarea_is_equal_一致"/>
+			<MiningField name="car_info.carlocation_is_equal_一致"/>
+			<MiningField name="car_info.carlocation_is_equal_不一致"/>
+			<MiningField name="car_info.seller_carlocation_is_equal_一致"/>
+			<MiningField name="car_info.seller_carlocation_is_equal_不一致"/>
+			<MiningField name="car_info.b.country_process_0"/>
+			<MiningField name="car_info.b.country_process_1"/>
+			<MiningField name="car_info.b.country_process_2"/>
+			<MiningField name="car_info.b.country_process_3"/>
+			<MiningField name="car_info.b.country_process_5"/>
+			<MiningField name="car_info.b.country_process_6"/>
+			<MiningField name="car_info.b.gear_box_type_process_AMT"/>
+			<MiningField name="car_info.b.gear_box_type_process_AT"/>
+			<MiningField name="car_info.b.gear_box_type_process_CVT"/>
+			<MiningField name="car_info.b.gear_box_type_process_DCT"/>
+			<MiningField name="car_info.b.gear_box_type_process_MT"/>
+			<MiningField name="car_info.b.gear_box_type_process_其他"/>
+			<MiningField name="car_info.b.intake_type_process_涡轮增压"/>
+			<MiningField name="car_info.b.intake_type_process_自然吸气"/>
+			<MiningField name="car_info.b.environmental_standards_process_国II"/>
+			<MiningField name="car_info.b.environmental_standards_process_国III"/>
+			<MiningField name="car_info.b.environmental_standards_process_国IV"/>
+			<MiningField name="car_info.b.environmental_standards_process_国I及以下"/>
+			<MiningField name="car_info.b.environmental_standards_process_国V"/>
+			<MiningField name="car_info.b.environmental_standards_process_国VI"/>
+			<MiningField name="car_info.b.fuel_form_standards_process_2"/>
+			<MiningField name="car_info.b.fuel_form_standards_process_3"/>
+			<MiningField name="car_info.b.fuel_form_standards_process_5"/>
+			<MiningField name="car_info.b.fuel_form_standards_process_6"/>
+			<MiningField name="car_info.b.fuel_form_standards_process_7"/>
+			<MiningField name="car_info.b.gear_box_process_2"/>
+			<MiningField name="car_info.b.gear_box_process_3"/>
+			<MiningField name="car_info.b.import_type_process_1"/>
+			<MiningField name="car_info.b.import_type_process_2"/>
+			<MiningField name="car_info.b.import_type_process_3"/>
+			<MiningField name="car_info.b.import_type_process_4"/>
+			<MiningField name="seller_info.b.gender_0"/>
+			<MiningField name="seller_info.b.gender_1"/>
+			<MiningField name="seller_info.b.is_xiaoquan_0"/>
+			<MiningField name="seller_info.b.is_xiaoquan_1"/>
+			<MiningField name="seller_info.b.isauthenticate_0"/>
+			<MiningField name="seller_info.b.isauthenticate_1"/>
+			<MiningField name="seller_info.b.user_attribute_00974"/>
+			<MiningField name="seller_info.b.user_attribute_02272"/>
+			<MiningField name="seller_info.b.user_attribute_大域"/>
+			<MiningField name="seller_info.b.user_attribute_小圈"/>
+			<MiningField name="seller_info.b.is_chongbao_0"/>
+			<MiningField name="seller_info.b.is_chongbao_01398"/>
+			<MiningField name="seller_info.b.is_chongbao_1"/>
+			<MiningField name="seller_info.b.is_chongbao_四川"/>
+			<MiningField name="seller_info.b.is_chujia_0"/>
+			<MiningField name="seller_info.b.is_chujia_1"/>
+			<MiningField name="seller_info.b.is_chujia_大域"/>
+			<MiningField name="seller_info.b.is_chujia_浙江"/>
+			<MiningField name="seller_info.b.is_chengjiao_0"/>
+			<MiningField name="seller_info.b.is_chengjiao_1"/>
+			<MiningField name="seller_info.b.is_liulan_365_0"/>
+			<MiningField name="seller_info.b.is_liulan_365_1"/>
+			<MiningField name="seller_info.b.is_chengjiao_365_0"/>
+			<MiningField name="seller_info.b.is_chengjiao_365_1"/>
+			<MiningField name="seller_info.b.is_liulan_0"/>
+			<MiningField name="seller_info.b.is_liulan_1"/>
+			<MiningField name="seller_info.b.is_first_chengjiao_7_0"/>
+			<MiningField name="seller_info.b.is_first_chengjiao_7_1"/>
+			<MiningField name="seller_info.b.inputsource_1.0"/>
+			<MiningField name="seller_info.b.inputsource_2.0"/>
+			<MiningField name="seller_info.b.inputsource_4.0"/>
+			<MiningField name="seller_info.b.inputsource_5.0"/>
+			<MiningField name="seller_info.b.inputsource_7.0"/>
+			<MiningField name="seller_info.b.inputsource_41.0"/>
+			<MiningField name="seller_info.b.inputsource_91.0"/>
+			<MiningField name="seller_info.b.inputsource_92.0"/>
+			<MiningField name="seller_info.b.inputsource_96.0"/>
+			<MiningField name="seller_info.b.buyerlevel_0.0"/>
+			<MiningField name="seller_info.b.buyerlevel_1.0"/>
+			<MiningField name="seller_info.b.buyerlevel_2.0"/>
+			<MiningField name="seller_info.b.buyerlevel_3.0"/>
+			<MiningField name="seller_info.b.buyerlevel_4.0"/>
+			<MiningField name="seller_info.c.begintime_first_weekday_星期一"/>
+			<MiningField name="seller_info.c.begintime_first_weekday_星期三"/>
+			<MiningField name="seller_info.c.begintime_first_weekday_星期二"/>
+			<MiningField name="seller_info.c.begintime_first_weekday_星期五"/>
+			<MiningField name="seller_info.c.begintime_first_weekday_星期六"/>
+			<MiningField name="seller_info.c.begintime_first_weekday_星期四"/>
+			<MiningField name="seller_info.c.begintime_first_weekday_星期天"/>
+			<MiningField name="seller_info.c.begintime_first_hourbin_0~6h"/>
+			<MiningField name="seller_info.c.begintime_first_hourbin_10~12h"/>
+			<MiningField name="seller_info.c.begintime_first_hourbin_12~14h"/>
+			<MiningField name="seller_info.c.begintime_first_hourbin_14~17h"/>
+			<MiningField name="seller_info.c.begintime_first_hourbin_17~20h"/>
+			<MiningField name="seller_info.c.begintime_first_hourbin_20~22h"/>
+			<MiningField name="seller_info.c.begintime_first_hourbin_22~24h"/>
+			<MiningField name="seller_info.c.begintime_first_hourbin_6~8h"/>
+			<MiningField name="seller_info.c.begintime_first_hourbin_8~10h"/>
+			<MiningField name="car_info.a.rankleveldesc_35B"/>
+			<MiningField name="car_info.a.rankleveldesc_35C"/>
+			<MiningField name="car_info.a.rankleveldesc_35D"/>
+			<MiningField name="car_info.a.rankleveldesc_50A"/>
+			<MiningField name="car_info.a.rankleveldesc_50B"/>
+			<MiningField name="car_info.a.rankleveldesc_50C"/>
+			<MiningField name="car_info.a.rankleveldesc_50D"/>
+			<MiningField name="car_info.a.rankleveldesc_65A"/>
+			<MiningField name="car_info.a.rankleveldesc_65B"/>
+			<MiningField name="car_info.a.rankleveldesc_65C"/>
+			<MiningField name="car_info.a.rankleveldesc_65D"/>
+			<MiningField name="car_info.a.rankleveldesc_80A"/>
+			<MiningField name="car_info.a.rankleveldesc_80B"/>
+			<MiningField name="car_info.a.rankleveldesc_80C"/>
+			<MiningField name="car_info.a.rankleveldesc_80D"/>
+			<MiningField name="car_info.a.rankleveldesc_90A"/>
+			<MiningField name="car_info.a.rankleveldesc_95A"/>
+			<MiningField name="car_info.a.rankleveldesc_95B"/>
+			<MiningField name="car_info.a.sweptvolume_process_1.0~1.5"/>
+			<MiningField name="car_info.a.sweptvolume_process_1.5~2.0"/>
+			<MiningField name="car_info.a.sweptvolume_process_2.0~2.5"/>
+			<MiningField name="car_info.a.sweptvolume_process_2.5~3.0"/>
+			<MiningField name="car_info.a.sweptvolume_process_&lt;1.0"/>
+			<MiningField name="car_info.a.sweptvolume_process_&gt;3.0"/>
+			<MiningField name="car_info.a.car_age_process_1~3"/>
+			<MiningField name="car_info.a.car_age_process_3~6"/>
+			<MiningField name="car_info.a.car_age_process_6~10"/>
+			<MiningField name="car_info.a.car_age_process_&lt;1"/>
+			<MiningField name="car_info.a.car_age_process_&gt;10"/>
+			<MiningField name="car_info.a.mileage_process_10~15"/>
+			<MiningField name="car_info.a.mileage_process_15~25"/>
+			<MiningField name="car_info.a.mileage_process_25~50"/>
+			<MiningField name="car_info.a.mileage_process_2~5"/>
+			<MiningField name="car_info.a.mileage_process_5~10"/>
+			<MiningField name="car_info.a.mileage_process_&lt;2"/>
+			<MiningField name="car_info.car_age_and_mileage_age1~3&amp;mileage10~15"/>
+			<MiningField name="car_info.car_age_and_mileage_age1~3&amp;mileage15~25"/>
+			<MiningField name="car_info.car_age_and_mileage_age1~3&amp;mileage25~50"/>
+			<MiningField name="car_info.car_age_and_mileage_age1~3&amp;mileage2~5"/>
+			<MiningField name="car_info.car_age_and_mileage_age1~3&amp;mileage5~10"/>
+			<MiningField name="car_info.car_age_and_mileage_age1~3&amp;mileage&lt;2"/>
+			<MiningField name="car_info.car_age_and_mileage_age3~6&amp;mileage10~15"/>
+			<MiningField name="car_info.car_age_and_mileage_age3~6&amp;mileage15~25"/>
+			<MiningField name="car_info.car_age_and_mileage_age3~6&amp;mileage25~50"/>
+			<MiningField name="car_info.car_age_and_mileage_age3~6&amp;mileage2~5"/>
+			<MiningField name="car_info.car_age_and_mileage_age3~6&amp;mileage5~10"/>
+			<MiningField name="car_info.car_age_and_mileage_age3~6&amp;mileage&lt;2"/>
+			<MiningField name="car_info.car_age_and_mileage_age6~10&amp;mileage10~15"/>
+			<MiningField name="car_info.car_age_and_mileage_age6~10&amp;mileage15~25"/>
+			<MiningField name="car_info.car_age_and_mileage_age6~10&amp;mileage25~50"/>
+			<MiningField name="car_info.car_age_and_mileage_age6~10&amp;mileage2~5"/>
+			<MiningField name="car_info.car_age_and_mileage_age6~10&amp;mileage5~10"/>
+			<MiningField name="car_info.car_age_and_mileage_age6~10&amp;mileage&lt;2"/>
+			<MiningField name="car_info.car_age_and_mileage_age&lt;1&amp;mileage2~5"/>
+			<MiningField name="car_info.car_age_and_mileage_age&lt;1&amp;mileage5~10"/>
+			<MiningField name="car_info.car_age_and_mileage_age&lt;1&amp;mileage&lt;2"/>
+			<MiningField name="car_info.car_age_and_mileage_age&gt;10&amp;mileage10~15"/>
+			<MiningField name="car_info.car_age_and_mileage_age&gt;10&amp;mileage15~25"/>
+			<MiningField name="car_info.car_age_and_mileage_age&gt;10&amp;mileage25~50"/>
+			<MiningField name="car_info.car_age_and_mileage_age&gt;10&amp;mileage2~5"/>
+			<MiningField name="car_info.car_age_and_mileage_age&gt;10&amp;mileage5~10"/>
+			<MiningField name="car_info.car_age_and_mileage_age&gt;10&amp;mileage&lt;2"/>
+			<MiningField name="car_info.a.tradetimes_bin_ &lt;= 0"/>
+			<MiningField name="car_info.a.tradetimes_bin_ &gt; 0"/>
+			<MiningField name="car_info.b.site_num_bin_ &lt;= 2"/>
+			<MiningField name="car_info.b.site_num_bin_2~4"/>
+			<MiningField name="car_info.b.site_num_bin_&gt;4"/>
+			<MiningField name="car_info.b.engine_volume_bin_ &lt;= 1598"/>
+			<MiningField name="car_info.b.engine_volume_bin_1598~1991"/>
+			<MiningField name="car_info.b.engine_volume_bin_&gt;1991"/>
+			<MiningField name="car_info.b.length_bin_ &lt;= 4530"/>
+			<MiningField name="car_info.b.length_bin_4530~4670"/>
+			<MiningField name="car_info.b.length_bin_&gt;4670"/>
+			<MiningField name="car_info.b.width_bin_ &lt;= 1773"/>
+			<MiningField name="car_info.b.width_bin_1773~1820"/>
+			<MiningField name="car_info.b.width_bin_&gt;1820"/>
+			<MiningField name="car_info.b.height_bin_ &lt;= 1480"/>
+			<MiningField name="car_info.b.height_bin_1480~1530"/>
+			<MiningField name="car_info.b.height_bin_&gt;1530"/>
+			<MiningField name="car_info.b.official_oil_wear_bin_ &lt;= 7"/>
+			<MiningField name="car_info.b.official_oil_wear_bin_7~8"/>
+			<MiningField name="car_info.b.official_oil_wear_bin_&gt;8"/>
+			<MiningField name="car_info.b.guide_price_bin_ &lt;= 2500000"/>
+			<MiningField name="car_info.b.guide_price_bin_10000000~12500000"/>
+			<MiningField name="car_info.b.guide_price_bin_12500000~15000000"/>
+			<MiningField name="car_info.b.guide_price_bin_15000000~20000000"/>
+			<MiningField name="car_info.b.guide_price_bin_20000000~25000000"/>
+			<MiningField name="car_info.b.guide_price_bin_25000000~30000000"/>
+			<MiningField name="car_info.b.guide_price_bin_2500000~5000000"/>
+			<MiningField name="car_info.b.guide_price_bin_30000000~35000000"/>
+			<MiningField name="car_info.b.guide_price_bin_35000000~40000000"/>
+			<MiningField name="car_info.b.guide_price_bin_40000000~50000000"/>
+			<MiningField name="car_info.b.guide_price_bin_50000000~60000000"/>
+			<MiningField name="car_info.b.guide_price_bin_5000000~7500000"/>
+			<MiningField name="car_info.b.guide_price_bin_7500000~10000000"/>
+			<MiningField name="car_info.b.guide_price_bin_&gt;60000000"/>
+			<MiningField name="car_info.b.first_year_keepvalue_bin_ &lt;= 0.65"/>
+			<MiningField name="car_info.b.first_year_keepvalue_bin_0.65~0.754"/>
+			<MiningField name="car_info.b.first_year_keepvalue_bin_&gt;0.754"/>
+			<MiningField name="car_info.b.third_year_keepvalue_bin_ &lt;= 0.49"/>
+			<MiningField name="car_info.b.third_year_keepvalue_bin_0.49~0.6"/>
+			<MiningField name="car_info.b.third_year_keepvalue_bin_&gt;0.6"/>
+			<MiningField name="car_info.dljc_ss_bin_ &lt;= 0"/>
+			<MiningField name="car_info.wgjc_bx_bin_ &lt;= 7"/>
+			<MiningField name="car_info.wgjc_bx_bin_7~13"/>
+			<MiningField name="car_info.wgjc_bx_bin_&gt;13"/>
+			<MiningField name="car_info.wgjc_gc_bin_ &lt;= 11"/>
+			<MiningField name="car_info.wgjc_gc_bin_11~17"/>
+			<MiningField name="car_info.wgjc_gc_bin_&gt;17"/>
+			<MiningField name="car_info.wgjc_hh_bin_ &lt;= 7"/>
+			<MiningField name="car_info.wgjc_hh_bin_7~12"/>
+			<MiningField name="car_info.wgjc_hh_bin_&gt;12"/>
+			<MiningField name="car_info.wgjc_czq_bin_ &lt;= 0"/>
+			<MiningField name="car_info.wgjc_czq_bin_0~6"/>
+			<MiningField name="car_info.wgjc_czq_bin_6~16"/>
+			<MiningField name="car_info.wgjc_czq_bin_&gt;16"/>
+			<MiningField name="car_info.cnjc_ms_ps_bin_ &lt;= 6"/>
+			<MiningField name="car_info.cnjc_ms_ps_bin_6~10"/>
+			<MiningField name="car_info.cnjc_ms_ps_bin_&gt;10"/>
+			<MiningField name="car_info.cnjc_hh_bin_ &lt;= 2"/>
+			<MiningField name="car_info.cnjc_hh_bin_2~5"/>
+			<MiningField name="car_info.cnjc_hh_bin_&gt;5"/>
+			<MiningField name="car_info.model_order_num_pre180_bin_ &lt;= 3"/>
+			<MiningField name="car_info.model_order_num_pre180_bin_3~9"/>
+			<MiningField name="car_info.model_order_num_pre180_bin_9~20"/>
+			<MiningField name="car_info.model_order_num_pre180_bin_&gt;20"/>
+			<MiningField name="car_info.model_bids_num_pre180_bin_ &lt;= 100"/>
+			<MiningField name="car_info.model_bids_num_pre180_bin_100~300"/>
+			<MiningField name="car_info.model_bids_num_pre180_bin_300~700"/>
+			<MiningField name="car_info.model_bids_num_pre180_bin_&gt;700"/>
+			<MiningField name="car_info.model_order_bids_rate_pre180_bin_ &lt;= 0.029"/>
+			<MiningField name="car_info.model_order_bids_rate_pre180_bin_0.029~0.045"/>
+			<MiningField name="car_info.model_order_bids_rate_pre180_bin_&gt;0.045"/>
+			<MiningField name="car_info.series_order_num_pre180_bin_ &lt;= 50"/>
+			<MiningField name="car_info.series_order_num_pre180_bin_150~300"/>
+			<MiningField name="car_info.series_order_num_pre180_bin_50~150"/>
+			<MiningField name="car_info.series_order_num_pre180_bin_&gt;300"/>
+			<MiningField name="car_info.series_bids_num_pre180_bin_ &lt;= 1000"/>
+			<MiningField name="car_info.series_bids_num_pre180_bin_1000~4800"/>
+			<MiningField name="car_info.series_bids_num_pre180_bin_4800~12000"/>
+			<MiningField name="car_info.series_bids_num_pre180_bin_&gt;12000"/>
+			<MiningField name="car_info.series_order_bids_rate_pre180_bin_ &lt;= 0.028"/>
+			<MiningField name="car_info.series_order_bids_rate_pre180_bin_0.028~0.042"/>
+			<MiningField name="car_info.series_order_bids_rate_pre180_bin_&gt;0.042"/>
+			<MiningField name="car_info.model_order_num_pre15_bin_未知"/>
+			<MiningField name="car_info.model_order_num_pre15_diff_bin_未知"/>
+			<MiningField name="car_info.series_order_num_pre15_bin_未知"/>
+			<MiningField name="car_info.series_order_num_pre15_diff_bin_未知"/>
+			<MiningField name="car_info.a.publishyear_delta_bin_ &lt;= 2"/>
+			<MiningField name="car_info.a.publishyear_delta_bin_2~3"/>
+			<MiningField name="car_info.a.publishyear_delta_bin_&gt;3"/>
+			<MiningField name="car_info.a.insureexpired_diffdays_bin_ &lt;= 114"/>
+			<MiningField name="car_info.a.insureexpired_diffdays_bin_114~226"/>
+			<MiningField name="car_info.a.insureexpired_diffdays_bin_&gt;226"/>
+			<MiningField name="car_info.a.inspectexpired_diffdays_bin_ &lt;= 144"/>
+			<MiningField name="car_info.a.inspectexpired_diffdays_bin_144~260"/>
+			<MiningField name="car_info.a.inspectexpired_diffdays_bin_&gt;260"/>
+			<MiningField name="car_info.b.twoyear_residual_ratio_bin_ &lt;= 0.07"/>
+			<MiningField name="car_info.b.twoyear_residual_ratio_bin_ &gt; 0.07"/>
+			<MiningField name="car_info.dealerBuyResidual_bin_未知"/>
+			<MiningField name="seller_info.b.unpurchased_days_bin_ &lt;= 298"/>
+			<MiningField name="seller_info.b.unpurchased_days_bin_298~314"/>
+			<MiningField name="seller_info.b.unpurchased_days_bin_&gt;314"/>
+			<MiningField name="seller_info.b.open_cyp_app_7_bin_ &lt;= 0"/>
+			<MiningField name="seller_info.b.open_cyp_app_7_bin_ &gt; 0"/>
+			<MiningField name="seller_info.b.open_cyp_app_30_bin_ &lt;= 0"/>
+			<MiningField name="seller_info.b.open_cyp_app_30_bin_ &gt; 0"/>
+			<MiningField name="seller_info.d1.buy_num_his_bin_ &lt;= 8"/>
+			<MiningField name="seller_info.d1.buy_num_his_bin_8~12"/>
+			<MiningField name="seller_info.d1.buy_num_his_bin_&gt;12"/>
+			<MiningField name="seller_info.d1.buy_num_pre30_bin_ &lt;= 0"/>
+			<MiningField name="seller_info.d2.seller_num_his_bin_ &lt;= 100"/>
+			<MiningField name="seller_info.d2.seller_num_his_bin_100~400"/>
+			<MiningField name="seller_info.d2.seller_num_his_bin_400~800"/>
+			<MiningField name="seller_info.d2.seller_num_his_bin_800~1100"/>
+			<MiningField name="seller_info.d2.seller_num_his_bin_&gt;1100"/>
+			<MiningField name="seller_info.d2.seller_num_pre30_bin_ &lt;= 30"/>
+			<MiningField name="seller_info.d2.seller_num_pre30_bin_30~88"/>
+			<MiningField name="seller_info.d2.seller_num_pre30_bin_&gt;88"/>
+			<MiningField name="seller_info.e.xinli_price_bin_ &lt;= 38000"/>
+			<MiningField name="seller_info.e.xinli_price_bin_38000~69100"/>
+			<MiningField name="seller_info.e.xinli_price_bin_&gt;69100"/>
+			<MiningField name="seller_info.e.qipai_price_bin_ &lt;= 7000"/>
+			<MiningField name="seller_info.e.qipai_price_bin_15000~30000"/>
+			<MiningField name="seller_info.e.qipai_price_bin_7000~15000"/>
+			<MiningField name="seller_info.e.qipai_price_bin_&gt;30000"/>
+			<MiningField name="seller_info.e.baoliu_price_bin_ &lt;= 25000"/>
+			<MiningField name="seller_info.e.baoliu_price_bin_100000~125000"/>
+			<MiningField name="seller_info.e.baoliu_price_bin_125000~150000"/>
+			<MiningField name="seller_info.e.baoliu_price_bin_150000~200000"/>
+			<MiningField name="seller_info.e.baoliu_price_bin_200000~250000"/>
+			<MiningField name="seller_info.e.baoliu_price_bin_250000~300000"/>
+			<MiningField name="seller_info.e.baoliu_price_bin_25000~50000"/>
+			<MiningField name="seller_info.e.baoliu_price_bin_300000~350000"/>
+			<MiningField name="seller_info.e.baoliu_price_bin_350000~400000"/>
+			<MiningField name="seller_info.e.baoliu_price_bin_400000~500000"/>
+			<MiningField name="seller_info.e.baoliu_price_bin_500000~600000"/>
+			<MiningField name="seller_info.e.baoliu_price_bin_50000~75000"/>
+			<MiningField name="seller_info.e.baoliu_price_bin_75000~100000"/>
+			<MiningField name="seller_info.e.baoliu_price_bin_&gt;600000"/>
+			<MiningField name="seller_info.b.registdate_diffdays_bin_ &lt;= -1"/>
+			<MiningField name="seller_info.b.registdate_diffdays_bin_-1~0"/>
+			<MiningField name="seller_info.b.registdate_diffdays_bin_0~90"/>
+			<MiningField name="seller_info.b.registdate_diffdays_bin_180~365"/>
+			<MiningField name="seller_info.b.registdate_diffdays_bin_365~730"/>
+			<MiningField name="seller_info.b.registdate_diffdays_bin_730~1095"/>
+			<MiningField name="seller_info.b.registdate_diffdays_bin_90~180"/>
+			<MiningField name="seller_info.b.registdate_diffdays_bin_&gt;1095"/>
+			<MiningField name="seller_info.e.service_price_bin_ &lt;= 0"/>
+			<MiningField name="seller_info.e.service_price_bin_0~1000"/>
+			<MiningField name="seller_info.e.service_price_bin_&gt;1000"/>
+			<MiningField name="seller_info.f.seller_auction_cyp_num_bin_ &lt;= 1366"/>
+			<MiningField name="seller_info.f.seller_auction_cyp_num_bin_1366~3354"/>
+			<MiningField name="seller_info.f.seller_auction_cyp_num_bin_&gt;3354"/>
+			<MiningField name="seller_info.f.seller_auction_cyp_deal_num_bin_ &lt;= 824"/>
+			<MiningField name="seller_info.f.seller_auction_cyp_deal_num_bin_824~1939"/>
+			<MiningField name="seller_info.f.seller_auction_cyp_deal_num_bin_&gt;1939"/>
+			<MiningField name="seller_info.f.seller_auction_cyp_up_price_num_bin_ &lt;= 2855"/>
+			<MiningField name="seller_info.f.seller_auction_cyp_up_price_num_bin_2855~8129"/>
+			<MiningField name="seller_info.f.seller_auction_cyp_up_price_num_bin_&gt;8129"/>
+			<MiningField name="seller_info.f.seller_auction_cyp_up_price_seller_break_num_bin_ &lt;= 2"/>
+			<MiningField name="seller_info.f.seller_auction_cyp_up_price_seller_break_num_bin_2~7"/>
+			<MiningField name="seller_info.f.seller_auction_cyp_up_price_seller_break_num_bin_&gt;7"/>
+			<MiningField name="seller_info.f.seller_auction_cyp_deal_seller_break_num_bin_ &lt;= 0"/>
+			<MiningField name="seller_info.f.seller_auction_cyp_deal_seller_break_num_bin_ &gt; 0"/>
+			<MiningField name="seller_info.f.seller_auction_cyp_deal_ratio_bin_ &lt;= 0"/>
+			<MiningField name="seller_info.f.seller_auction_cyp_deal_ratio_bin_ &gt; 0"/>
+			<MiningField name="seller_info.f.seller_auction_cyp_up_price_ratio_bin_ &lt;= 2"/>
+			<MiningField name="seller_info.f.seller_auction_cyp_up_price_ratio_bin_2~3"/>
+			<MiningField name="seller_info.f.seller_auction_cyp_up_price_ratio_bin_&gt;3"/>
+			<MiningField name="seller_info.f.seller_auction_cyp_up_price_seller_break_ratio_bin_ &lt;= 0"/>
+			<MiningField name="seller_info.f.seller_auction_cyp_up_price_seller_break_ratio_bin_ &gt; 0"/>
+			<MiningField name="seller_info.f.seller_auction_cyp_deal_seller_break_ratio_bin_ &lt;= 0"/>
+			<MiningField name="seller_info.f.seller_auction_cyp_deal_seller_break_ratio_bin_ &gt; 0"/>
+			<MiningField name="car_info.dealerRes_buy_rate_bin_未知"/>
+			<MiningField name="seller_info.e.baoliu_price_dealer_buy_bin_未知"/>
+			<MiningField name="seller_info.e.baoliu_price_dealer_buy_diffrate_bin_未知"/>
+			<MiningField name="platform_info.balance_user_num_bin_ &lt;= 0"/>
+			<MiningField name="platform_info.balance_user_num_bin_0~5"/>
+			<MiningField name="platform_info.balance_user_num_bin_10~15"/>
+			<MiningField name="platform_info.balance_user_num_bin_5~10"/>
+			<MiningField name="platform_info.balance_user_num_bin_&gt;15"/>
+			<MiningField name="platform_info.view_user_num_pre7_bin_ &lt;= 0"/>
+			<MiningField name="platform_info.view_user_num_pre7_bin_0~50"/>
+			<MiningField name="platform_info.view_user_num_pre7_bin_50~100"/>
+			<MiningField name="platform_info.view_num_pre7_bin_ &lt;= 0"/>
+			<MiningField name="platform_info.view_num_pre7_bin_0~1500"/>
+			<MiningField name="platform_info.view_num_pre7_bin_1500~4500"/>
+			<MiningField name="platform_info.view_num_pre7_bin_&gt;4500"/>
+			<MiningField name="platform_info.view_user_num_mean_pre7_bin_ &lt;= -0.25"/>
+			<MiningField name="platform_info.view_user_num_mean_pre7_bin_-0.25~0.0"/>
+			<MiningField name="platform_info.view_user_num_mean_pre7_bin_0.0~0.25"/>
+			<MiningField name="platform_info.view_user_num_mean_pre7_bin_&gt;0.25"/>
+			<MiningField name="platform_info.focus_user_car_num_pre7_bin_ &lt;= -150"/>
+			<MiningField name="platform_info.focus_user_car_num_pre7_bin_-150~0"/>
+			<MiningField name="platform_info.focus_user_car_num_pre7_bin_0~80"/>
+			<MiningField name="platform_info.focus_user_car_num_pre7_bin_&gt;80"/>
+			<MiningField name="platform_info.focus_user_num_pre7_bin_ &lt;= 0"/>
+			<MiningField name="platform_info.focus_user_num_pre7_bin_0~10"/>
+			<MiningField name="platform_info.focus_user_num_pre7_bin_&gt;10"/>
+			<MiningField name="platform_info.user_bids_num_pre7_bin_ &lt;= -1500"/>
+			<MiningField name="platform_info.user_bids_num_pre7_bin_-1500~0"/>
+			<MiningField name="platform_info.user_bids_num_pre7_bin_0~1500"/>
+			<MiningField name="platform_info.user_bids_num_pre7_bin_&gt;1500"/>
+			<MiningField name="platform_info.bid_user_num_pre7_bin_ &lt;= 0"/>
+			<MiningField name="platform_info.bid_user_num_pre7_bin_0~5"/>
+			<MiningField name="platform_info.bid_user_num_pre7_bin_5~15"/>
+			<MiningField name="platform_info.bid_user_num_pre7_bin_&gt;15"/>
+			<MiningField name="platform_info.order_num_pre7_bin_ &lt;= -50"/>
+			<MiningField name="platform_info.order_num_pre7_bin_-50~0"/>
+			<MiningField name="platform_info.order_num_pre7_bin_0~30"/>
+			<MiningField name="platform_info.order_num_pre7_bin_&gt;30"/>
+			<MiningField name="platform_info.order_num_mean_pre7_bin_ &lt;= -0.03"/>
+			<MiningField name="platform_info.order_num_mean_pre7_bin_-0.03~0.0"/>
+			<MiningField name="platform_info.order_num_mean_pre7_bin_0.0~0.03"/>
+			<MiningField name="platform_info.order_num_mean_pre7_bin_&gt;0.03"/>
+			<MiningField name="platform_info.user_bids_num_mean_pre7_bin_ &lt;= 37"/>
+			<MiningField name="platform_info.user_bids_num_mean_pre7_bin_37~39"/>
+			<MiningField name="platform_info.user_bids_num_mean_pre7_bin_&gt;39"/>
+			<MiningField name="platform_info.order_user_bids_num_pre7_rate_bin_ &lt;= 0.0085"/>
+			<MiningField name="platform_info.order_user_bids_num_pre7_rate_bin_ &gt; 0.0085"/>
+			<MiningField name="platform_info.bids_view_num_pre7_rate_bin_ &lt;= 0.16"/>
+			<MiningField name="platform_info.bids_view_num_pre7_rate_bin_ &gt; 0.16"/>
+			<MiningField name="car_info.b.guide_price_bin_ &lt;= 2500000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000"/>
+			<MiningField name="car_info.b.guide_price_bin_10000000~12500000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000"/>
+			<MiningField name="car_info.b.guide_price_bin_10000000~12500000 &amp; seller_info.e.baoliu_price_bin_100000~125000"/>
+			<MiningField name="car_info.b.guide_price_bin_10000000~12500000 &amp; seller_info.e.baoliu_price_bin_125000~150000"/>
+			<MiningField name="car_info.b.guide_price_bin_10000000~12500000 &amp; seller_info.e.baoliu_price_bin_150000~200000"/>
+			<MiningField name="car_info.b.guide_price_bin_10000000~12500000 &amp; seller_info.e.baoliu_price_bin_25000~50000"/>
+			<MiningField name="car_info.b.guide_price_bin_10000000~12500000 &amp; seller_info.e.baoliu_price_bin_50000~75000"/>
+			<MiningField name="car_info.b.guide_price_bin_10000000~12500000 &amp; seller_info.e.baoliu_price_bin_75000~100000"/>
+			<MiningField name="car_info.b.guide_price_bin_12500000~15000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000"/>
+			<MiningField name="car_info.b.guide_price_bin_12500000~15000000 &amp; seller_info.e.baoliu_price_bin_100000~125000"/>
+			<MiningField name="car_info.b.guide_price_bin_12500000~15000000 &amp; seller_info.e.baoliu_price_bin_125000~150000"/>
+			<MiningField name="car_info.b.guide_price_bin_12500000~15000000 &amp; seller_info.e.baoliu_price_bin_150000~200000"/>
+			<MiningField name="car_info.b.guide_price_bin_12500000~15000000 &amp; seller_info.e.baoliu_price_bin_200000~250000"/>
+			<MiningField name="car_info.b.guide_price_bin_12500000~15000000 &amp; seller_info.e.baoliu_price_bin_25000~50000"/>
+			<MiningField name="car_info.b.guide_price_bin_12500000~15000000 &amp; seller_info.e.baoliu_price_bin_50000~75000"/>
+			<MiningField name="car_info.b.guide_price_bin_12500000~15000000 &amp; seller_info.e.baoliu_price_bin_75000~100000"/>
+			<MiningField name="car_info.b.guide_price_bin_15000000~20000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000"/>
+			<MiningField name="car_info.b.guide_price_bin_15000000~20000000 &amp; seller_info.e.baoliu_price_bin_100000~125000"/>
+			<MiningField name="car_info.b.guide_price_bin_15000000~20000000 &amp; seller_info.e.baoliu_price_bin_125000~150000"/>
+			<MiningField name="car_info.b.guide_price_bin_15000000~20000000 &amp; seller_info.e.baoliu_price_bin_150000~200000"/>
+			<MiningField name="car_info.b.guide_price_bin_15000000~20000000 &amp; seller_info.e.baoliu_price_bin_200000~250000"/>
+			<MiningField name="car_info.b.guide_price_bin_15000000~20000000 &amp; seller_info.e.baoliu_price_bin_250000~300000"/>
+			<MiningField name="car_info.b.guide_price_bin_15000000~20000000 &amp; seller_info.e.baoliu_price_bin_25000~50000"/>
+			<MiningField name="car_info.b.guide_price_bin_15000000~20000000 &amp; seller_info.e.baoliu_price_bin_50000~75000"/>
+			<MiningField name="car_info.b.guide_price_bin_15000000~20000000 &amp; seller_info.e.baoliu_price_bin_75000~100000"/>
+			<MiningField name="car_info.b.guide_price_bin_20000000~25000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000"/>
+			<MiningField name="car_info.b.guide_price_bin_20000000~25000000 &amp; seller_info.e.baoliu_price_bin_100000~125000"/>
+			<MiningField name="car_info.b.guide_price_bin_20000000~25000000 &amp; seller_info.e.baoliu_price_bin_125000~150000"/>
+			<MiningField name="car_info.b.guide_price_bin_20000000~25000000 &amp; seller_info.e.baoliu_price_bin_150000~200000"/>
+			<MiningField name="car_info.b.guide_price_bin_20000000~25000000 &amp; seller_info.e.baoliu_price_bin_200000~250000"/>
+			<MiningField name="car_info.b.guide_price_bin_20000000~25000000 &amp; seller_info.e.baoliu_price_bin_250000~300000"/>
+			<MiningField name="car_info.b.guide_price_bin_20000000~25000000 &amp; seller_info.e.baoliu_price_bin_25000~50000"/>
+			<MiningField name="car_info.b.guide_price_bin_20000000~25000000 &amp; seller_info.e.baoliu_price_bin_50000~75000"/>
+			<MiningField name="car_info.b.guide_price_bin_20000000~25000000 &amp; seller_info.e.baoliu_price_bin_75000~100000"/>
+			<MiningField name="car_info.b.guide_price_bin_20000000~25000000 &amp; seller_info.e.baoliu_price_bin_&gt;600000"/>
+			<MiningField name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000"/>
+			<MiningField name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_100000~125000"/>
+			<MiningField name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_125000~150000"/>
+			<MiningField name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_150000~200000"/>
+			<MiningField name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_200000~250000"/>
+			<MiningField name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_250000~300000"/>
+			<MiningField name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_25000~50000"/>
+			<MiningField name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_300000~350000"/>
+			<MiningField name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_50000~75000"/>
+			<MiningField name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_75000~100000"/>
+			<MiningField name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_&gt;600000"/>
+			<MiningField name="car_info.b.guide_price_bin_2500000~5000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000"/>
+			<MiningField name="car_info.b.guide_price_bin_2500000~5000000 &amp; seller_info.e.baoliu_price_bin_25000~50000"/>
+			<MiningField name="car_info.b.guide_price_bin_2500000~5000000 &amp; seller_info.e.baoliu_price_bin_50000~75000"/>
+			<MiningField name="car_info.b.guide_price_bin_30000000~35000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000"/>
+			<MiningField name="car_info.b.guide_price_bin_30000000~35000000 &amp; seller_info.e.baoliu_price_bin_100000~125000"/>
+			<MiningField name="car_info.b.guide_price_bin_30000000~35000000 &amp; seller_info.e.baoliu_price_bin_125000~150000"/>
+			<MiningField name="car_info.b.guide_price_bin_30000000~35000000 &amp; seller_info.e.baoliu_price_bin_150000~200000"/>
+			<MiningField name="car_info.b.guide_price_bin_30000000~35000000 &amp; seller_info.e.baoliu_price_bin_200000~250000"/>
+			<MiningField name="car_info.b.guide_price_bin_30000000~35000000 &amp; seller_info.e.baoliu_price_bin_250000~300000"/>
+			<MiningField name="car_info.b.guide_price_bin_30000000~35000000 &amp; seller_info.e.baoliu_price_bin_25000~50000"/>
+			<MiningField name="car_info.b.guide_price_bin_30000000~35000000 &amp; seller_info.e.baoliu_price_bin_300000~350000"/>
+			<MiningField name="car_info.b.guide_price_bin_30000000~35000000 &amp; seller_info.e.baoliu_price_bin_50000~75000"/>
+			<MiningField name="car_info.b.guide_price_bin_30000000~35000000 &amp; seller_info.e.baoliu_price_bin_75000~100000"/>
+			<MiningField name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000"/>
+			<MiningField name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_100000~125000"/>
+			<MiningField name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_125000~150000"/>
+			<MiningField name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_150000~200000"/>
+			<MiningField name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_200000~250000"/>
+			<MiningField name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_250000~300000"/>
+			<MiningField name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_25000~50000"/>
+			<MiningField name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_300000~350000"/>
+			<MiningField name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_350000~400000"/>
+			<MiningField name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_400000~500000"/>
+			<MiningField name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_500000~600000"/>
+			<MiningField name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_50000~75000"/>
+			<MiningField name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_75000~100000"/>
+			<MiningField name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000"/>
+			<MiningField name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_100000~125000"/>
+			<MiningField name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_125000~150000"/>
+			<MiningField name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_150000~200000"/>
+			<MiningField name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_200000~250000"/>
+			<MiningField name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_250000~300000"/>
+			<MiningField name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_25000~50000"/>
+			<MiningField name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_300000~350000"/>
+			<MiningField name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_350000~400000"/>
+			<MiningField name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_400000~500000"/>
+			<MiningField name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_500000~600000"/>
+			<MiningField name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_50000~75000"/>
+			<MiningField name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_75000~100000"/>
+			<MiningField name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_&gt;600000"/>
+			<MiningField name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000"/>
+			<MiningField name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_100000~125000"/>
+			<MiningField name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_125000~150000"/>
+			<MiningField name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_150000~200000"/>
+			<MiningField name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_200000~250000"/>
+			<MiningField name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_250000~300000"/>
+			<MiningField name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_25000~50000"/>
+			<MiningField name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_300000~350000"/>
+			<MiningField name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_400000~500000"/>
+			<MiningField name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_500000~600000"/>
+			<MiningField name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_50000~75000"/>
+			<MiningField name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_75000~100000"/>
+			<MiningField name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_&gt;600000"/>
+			<MiningField name="car_info.b.guide_price_bin_5000000~7500000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000"/>
+			<MiningField name="car_info.b.guide_price_bin_5000000~7500000 &amp; seller_info.e.baoliu_price_bin_100000~125000"/>
+			<MiningField name="car_info.b.guide_price_bin_5000000~7500000 &amp; seller_info.e.baoliu_price_bin_25000~50000"/>
+			<MiningField name="car_info.b.guide_price_bin_5000000~7500000 &amp; seller_info.e.baoliu_price_bin_50000~75000"/>
+			<MiningField name="car_info.b.guide_price_bin_7500000~10000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000"/>
+			<MiningField name="car_info.b.guide_price_bin_7500000~10000000 &amp; seller_info.e.baoliu_price_bin_100000~125000"/>
+			<MiningField name="car_info.b.guide_price_bin_7500000~10000000 &amp; seller_info.e.baoliu_price_bin_25000~50000"/>
+			<MiningField name="car_info.b.guide_price_bin_7500000~10000000 &amp; seller_info.e.baoliu_price_bin_300000~350000"/>
+			<MiningField name="car_info.b.guide_price_bin_7500000~10000000 &amp; seller_info.e.baoliu_price_bin_50000~75000"/>
+			<MiningField name="car_info.b.guide_price_bin_7500000~10000000 &amp; seller_info.e.baoliu_price_bin_75000~100000"/>
+			<MiningField name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000"/>
+			<MiningField name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_100000~125000"/>
+			<MiningField name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_125000~150000"/>
+			<MiningField name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_150000~200000"/>
+			<MiningField name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_200000~250000"/>
+			<MiningField name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_250000~300000"/>
+			<MiningField name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_25000~50000"/>
+			<MiningField name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_300000~350000"/>
+			<MiningField name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_350000~400000"/>
+			<MiningField name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_400000~500000"/>
+			<MiningField name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_500000~600000"/>
+			<MiningField name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_50000~75000"/>
+			<MiningField name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_75000~100000"/>
+			<MiningField name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_&gt;600000"/>
+			<MiningField name="seller_info.f.seller_auction_cyp_num_bin_ &lt;= 1366 &amp; seller_info.f.seller_auction_cyp_deal_ratio_bin_ &lt;= 0"/>
+			<MiningField name="seller_info.f.seller_auction_cyp_num_bin_ &lt;= 1366 &amp; seller_info.f.seller_auction_cyp_deal_ratio_bin_ &gt; 0"/>
+			<MiningField name="seller_info.f.seller_auction_cyp_num_bin_1366~3354 &amp; seller_info.f.seller_auction_cyp_deal_ratio_bin_ &gt; 0"/>
+			<MiningField name="seller_info.f.seller_auction_cyp_num_bin_&gt;3354 &amp; seller_info.f.seller_auction_cyp_deal_ratio_bin_ &lt;= 0"/>
+			<MiningField name="seller_info.f.seller_auction_cyp_num_bin_&gt;3354 &amp; seller_info.f.seller_auction_cyp_deal_ratio_bin_ &gt; 0"/>
+		</MiningSchema>
+		<Output>
+			<OutputField name="probability(0)" optype="continuous" dataType="double" feature="probability" value="0"/>
+			<OutputField name="probability(1)" optype="continuous" dataType="double" feature="probability" value="1"/>
+		</Output>
+		<RegressionTable intercept="12.628122130521248" targetCategory="1">
+			<NumericPredictor name="car_info.a.isauthentication_40" coefficient="0.014772566896824244"/>
+			<NumericPredictor name="car_info.a.isauthentication_50" coefficient="-0.010371334289454595"/>
+			<NumericPredictor name="car_info.a.ranklevel_35" coefficient="0.38563451271892996"/>
+			<NumericPredictor name="car_info.a.ranklevel_50" coefficient="-0.054548113593595605"/>
+			<NumericPredictor name="car_info.a.ranklevel_65" coefficient="-0.7691254924062836"/>
+			<NumericPredictor name="car_info.a.ranklevel_80" coefficient="-0.3671964818002323"/>
+			<NumericPredictor name="car_info.a.ranklevel_90" coefficient="0.08631390656818948"/>
+			<NumericPredictor name="car_info.a.ranklevel_95" coefficient="0.7233229011295467"/>
+			<NumericPredictor name="car_info.a.rankdesc_A" coefficient="-0.9535653938139375"/>
+			<NumericPredictor name="car_info.a.rankdesc_B" coefficient="0.7100727526318749"/>
+			<NumericPredictor name="car_info.a.rankdesc_C" coefficient="0.16114542027255732"/>
+			<NumericPredictor name="car_info.a.rankdesc_D" coefficient="0.08674845353357837"/>
+			<NumericPredictor name="car_info.a.purpose_0" coefficient="-1.1221665692448906"/>
+			<NumericPredictor name="car_info.a.purpose_10" coefficient="-0.16212275656528619"/>
+			<NumericPredictor name="car_info.a.purpose_100" coefficient="0.031001099819011054"/>
+			<NumericPredictor name="car_info.a.purpose_20" coefficient="-2.40195115589091"/>
+			<NumericPredictor name="car_info.a.purpose_30" coefficient="0.5239131852437338"/>
+			<NumericPredictor name="car_info.a.purpose_40" coefficient="1.0712383956080764"/>
+			<NumericPredictor name="car_info.a.purpose_50" coefficient="1.3766533403104086"/>
+			<NumericPredictor name="car_info.a.purpose_70" coefficient="0.6878356933288757"/>
+			<NumericPredictor name="car_info.a.complementtag_2" coefficient="0.0044012326087099546"/>
+			<NumericPredictor name="car_info.a.drivemode_两驱" coefficient="-0.1934972637144798"/>
+			<NumericPredictor name="car_info.a.drivemode_四驱" coefficient="0.1978984963260464"/>
+			<NumericPredictor name="car_info.a.isaccident_2" coefficient="0.0044012326087099546"/>
+			<NumericPredictor name="car_info.a.isblister_False" coefficient="0.0044012326087099546"/>
+			<NumericPredictor name="car_info.a.isfirecar_0" coefficient="0.0044012326087099546"/>
+			<NumericPredictor name="car_info.a.iswatercar_0" coefficient="0.0044012326087099546"/>
+			<NumericPredictor name="car_info.a.is_outland_trans_0" coefficient="0.5030102787518018"/>
+			<NumericPredictor name="car_info.a.is_outland_trans_1" coefficient="-0.49860904614132684"/>
+			<NumericPredictor name="car_info.a.is_stok_car_0" coefficient="0.050350305008916255"/>
+			<NumericPredictor name="car_info.a.is_stok_car_1" coefficient="-0.04594907239804381"/>
+			<NumericPredictor name="car_info.b.is_high_accelerate_否" coefficient="0.14664752405724452"/>
+			<NumericPredictor name="car_info.b.is_high_accelerate_是" coefficient="0.06788487333685188"/>
+			<NumericPredictor name="car_info.b.is_low_oil_否" coefficient="-0.05889318753851863"/>
+			<NumericPredictor name="car_info.b.is_low_oil_是" coefficient="0.026418100381844462"/>
+			<NumericPredictor name="car_info.b.is_big_normal_否" coefficient="0.15354650631642672"/>
+			<NumericPredictor name="car_info.b.is_big_normal_是" coefficient="-0.07742791231554755"/>
+			<NumericPredictor name="car_info.b.rate_space_一般" coefficient="-0.24484739609630515"/>
+			<NumericPredictor name="car_info.b.rate_space_好" coefficient="-0.10628090768405767"/>
+			<NumericPredictor name="car_info.b.rate_space_差或很差" coefficient="0.9957003727001479"/>
+			<NumericPredictor name="car_info.b.rate_space_很好" coefficient="-0.2023436608458888"/>
+			<NumericPredictor name="car_info.b.rate_space_较差" coefficient="0.09019488822616263"/>
+			<NumericPredictor name="car_info.b.rate_power_一般" coefficient="-0.047082894638293044"/>
+			<NumericPredictor name="car_info.b.rate_power_好" coefficient="0.11379367348652766"/>
+			<NumericPredictor name="car_info.b.rate_power_差或很差" coefficient="0.3725019466248716"/>
+			<NumericPredictor name="car_info.b.rate_power_很好" coefficient="0.18417153106255185"/>
+			<NumericPredictor name="car_info.b.rate_power_较差" coefficient="-0.09096096023203412"/>
+			<NumericPredictor name="car_info.b.rate_control_一般" coefficient="-0.08116418194974288"/>
+			<NumericPredictor name="car_info.b.rate_control_好" coefficient="-0.11617200083818417"/>
+			<NumericPredictor name="car_info.b.rate_control_差或很差" coefficient="1.5562306946060493"/>
+			<NumericPredictor name="car_info.b.rate_control_很好" coefficient="-0.19490206733274126"/>
+			<NumericPredictor name="car_info.b.rate_control_较差" coefficient="-0.6315691481926465"/>
+			<NumericPredictor name="car_info.b.rate_fuel_一般" coefficient="0.4524833651160549"/>
+			<NumericPredictor name="car_info.b.rate_fuel_好" coefficient="0.5763450095400415"/>
+			<NumericPredictor name="car_info.b.rate_fuel_差或很差" coefficient="-0.4194408239065299"/>
+			<NumericPredictor name="car_info.b.rate_fuel_很好" coefficient="0.464864022127737"/>
+			<NumericPredictor name="car_info.b.rate_fuel_较差" coefficient="0.5709921934588152"/>
+			<NumericPredictor name="car_info.b.rate_comfortable_一般" coefficient="-0.08377230907108613"/>
+			<NumericPredictor name="car_info.b.rate_comfortable_好" coefficient="0.14498166156980982"/>
+			<NumericPredictor name="car_info.b.rate_comfortable_差或很差" coefficient="-0.12905910490937886"/>
+			<NumericPredictor name="car_info.b.rate_comfortable_很好" coefficient="0.2634400160680218"/>
+			<NumericPredictor name="car_info.b.rate_comfortable_较差" coefficient="0.3368330326426136"/>
+			<NumericPredictor name="car_info.b.rate_exterior_一般" coefficient="-0.13219613449699602"/>
+			<NumericPredictor name="car_info.b.rate_exterior_好" coefficient="0.15697277640810556"/>
+			<NumericPredictor name="car_info.b.rate_exterior_差或很差" coefficient="0.35684444986167785"/>
+			<NumericPredictor name="car_info.b.rate_exterior_很好" coefficient="0.10929390513788048"/>
+			<NumericPredictor name="car_info.b.rate_exterior_较差" coefficient="0.041508299380540764"/>
+			<NumericPredictor name="car_info.b.rate_trim_一般" coefficient="0.07858413447667979"/>
+			<NumericPredictor name="car_info.b.rate_trim_好" coefficient="0.11329886957821834"/>
+			<NumericPredictor name="car_info.b.rate_trim_差或很差" coefficient="0.3810046465257885"/>
+			<NumericPredictor name="car_info.b.rate_trim_很好" coefficient="0.046451650006301894"/>
+			<NumericPredictor name="car_info.b.rate_trim_较差" coefficient="-0.0869160042879602"/>
+			<NumericPredictor name="car_info.b.rate_price_一般" coefficient="-0.6993366601596794"/>
+			<NumericPredictor name="car_info.b.rate_price_好" coefficient="-0.40166815614780627"/>
+			<NumericPredictor name="car_info.b.rate_price_差或很差" coefficient="1.6383789115398981"/>
+			<NumericPredictor name="car_info.b.rate_price_很好" coefficient="-0.4219667986318588"/>
+			<NumericPredictor name="car_info.b.rate_price_较差" coefficient="0.4170159996988415"/>
+			<NumericPredictor name="car_info.level_new_MPV" coefficient="-0.37922496268325007"/>
+			<NumericPredictor name="car_info.level_new_中型车" coefficient="-0.3190020546602737"/>
+			<NumericPredictor name="car_info.level_new_中大型车" coefficient="-0.23106081506227844"/>
+			<NumericPredictor name="car_info.level_new_大型车" coefficient="-0.36319733450218183"/>
+			<NumericPredictor name="car_info.level_new_客车" coefficient="-0.5040229498542407"/>
+			<NumericPredictor name="car_info.level_new_小型车" coefficient="-0.028871224442418256"/>
+			<NumericPredictor name="car_info.level_new_微卡" coefficient="0.5491754403773953"/>
+			<NumericPredictor name="car_info.level_new_微型车" coefficient="0.3072214970295776"/>
+			<NumericPredictor name="car_info.level_new_皮卡" coefficient="0.997031384726989"/>
+			<NumericPredictor name="car_info.level_new_紧凑型" coefficient="-0.16531178439987068"/>
+			<NumericPredictor name="car_info.level_new_货车" coefficient="-0.16513311727902436"/>
+			<NumericPredictor name="car_info.level_new_跑车" coefficient="-0.174172352534483"/>
+			<NumericPredictor name="car_info.vehicle_type_MPV" coefficient="-0.37922496268325007"/>
+			<NumericPredictor name="car_info.vehicle_type_SUV" coefficient="-0.4986911032864133"/>
+			<NumericPredictor name="car_info.vehicle_type_客车" coefficient="-0.5040229498542407"/>
+			<NumericPredictor name="car_info.vehicle_type_皮卡" coefficient="1.5462068251043886"/>
+			<NumericPredictor name="car_info.vehicle_type_货车" coefficient="-0.16513311727902436"/>
+			<NumericPredictor name="car_info.vehicle_type_跑车" coefficient="-0.174172352534483"/>
+			<NumericPredictor name="car_info.vehicle_type_轿车" coefficient="-0.3015306127496168"/>
+			<NumericPredictor name="car_info.accelerate_compare_一般" coefficient="0.035699064535995084"/>
+			<NumericPredictor name="car_info.accelerate_compare_优秀" coefficient="0.32048445489810107"/>
+			<NumericPredictor name="car_info.accelerate_compare_良好" coefficient="-0.15975434925850593"/>
+			<NumericPredictor name="car_info.accelerate_compare_较差" coefficient="0.01810322722202071"/>
+			<NumericPredictor name="car_info.fuel_compare_一般" coefficient="0.3583960422778212"/>
+			<NumericPredictor name="car_info.fuel_compare_优秀" coefficient="-0.3873192686123948"/>
+			<NumericPredictor name="car_info.fuel_compare_良好" coefficient="-0.32758376177595294"/>
+			<NumericPredictor name="car_info.fuel_compare_较差" coefficient="0.3240319009569612"/>
+			<NumericPredictor name="car_info.is_high75equip_0.0" coefficient="-0.19930050067082156"/>
+			<NumericPredictor name="car_info.is_high75equip_1.0" coefficient="-0.21874685922389786"/>
+			<NumericPredictor name="car_info.a.actionmode_快拍" coefficient="0.48739774269174835"/>
+			<NumericPredictor name="car_info.a.actionmode_易拍" coefficient="-0.3943580433152538"/>
+			<NumericPredictor name="car_info.a.actionmode_随时拍" coefficient="-0.08863846676563893"/>
+			<NumericPredictor name="car_info.a.carlocation_bin_其他" coefficient="0.08336945327335947"/>
+			<NumericPredictor name="car_info.a.carlocation_bin_北京" coefficient="-0.41769730966014995"/>
+			<NumericPredictor name="car_info.a.carlocation_bin_天津" coefficient="0.8399473082448224"/>
+			<NumericPredictor name="car_info.a.carlocation_bin_成都" coefficient="-0.04517055860882664"/>
+			<NumericPredictor name="car_info.a.carlocation_bin_杭州" coefficient="-0.4560476606378166"/>
+			<NumericPredictor name="car_info.a.color_process_常规颜色" coefficient="-0.5545778959110075"/>
+			<NumericPredictor name="car_info.a.color_process_比较常规颜色" coefficient="-0.29508354179388085"/>
+			<NumericPredictor name="car_info.a.color_process_灰/银" coefficient="-0.5020136485970388"/>
+			<NumericPredictor name="car_info.a.color_process_非常规颜色" coefficient="-0.5330289062983853"/>
+			<NumericPredictor name="car_info.a.color_process_黑/白" coefficient="-0.4939850845262318"/>
+			<NumericPredictor name="car_info.regarea_is_equal_一致" coefficient="0.02245147980459124"/>
+			<NumericPredictor name="car_info.carlocation_is_equal_一致" coefficient="0.41669637218381317"/>
+			<NumericPredictor name="car_info.carlocation_is_equal_不一致" coefficient="1.5593942514423274"/>
+			<NumericPredictor name="car_info.seller_carlocation_is_equal_一致" coefficient="-0.10475512399046473"/>
+			<NumericPredictor name="car_info.seller_carlocation_is_equal_不一致" coefficient="-0.6535250353257273"/>
+			<NumericPredictor name="car_info.b.country_process_0" coefficient="-0.2243250956296814"/>
+			<NumericPredictor name="car_info.b.country_process_1" coefficient="-0.2812153511519606"/>
+			<NumericPredictor name="car_info.b.country_process_2" coefficient="-0.02617606804885563"/>
+			<NumericPredictor name="car_info.b.country_process_3" coefficient="-0.027530825922587494"/>
+			<NumericPredictor name="car_info.b.country_process_5" coefficient="0.16054154485575603"/>
+			<NumericPredictor name="car_info.b.country_process_6" coefficient="-0.019341563992702267"/>
+			<NumericPredictor name="car_info.b.gear_box_type_process_AMT" coefficient="-0.26545606786412307"/>
+			<NumericPredictor name="car_info.b.gear_box_type_process_AT" coefficient="0.08084965945968468"/>
+			<NumericPredictor name="car_info.b.gear_box_type_process_CVT" coefficient="0.09691211155650455"/>
+			<NumericPredictor name="car_info.b.gear_box_type_process_DCT" coefficient="-0.04869045956722687"/>
+			<NumericPredictor name="car_info.b.gear_box_type_process_MT" coefficient="0.02774795064652699"/>
+			<NumericPredictor name="car_info.b.gear_box_type_process_其他" coefficient="0.1130380383878575"/>
+			<NumericPredictor name="car_info.b.intake_type_process_涡轮增压" coefficient="0.05838348076872965"/>
+			<NumericPredictor name="car_info.b.intake_type_process_自然吸气" coefficient="-0.05398224816083289"/>
+			<NumericPredictor name="car_info.b.environmental_standards_process_国II" coefficient="-0.027182436071527392"/>
+			<NumericPredictor name="car_info.b.environmental_standards_process_国III" coefficient="-0.03613151303145399"/>
+			<NumericPredictor name="car_info.b.environmental_standards_process_国IV" coefficient="-0.36228578436782904"/>
+			<NumericPredictor name="car_info.b.environmental_standards_process_国I及以下" coefficient="-0.5170859604454017"/>
+			<NumericPredictor name="car_info.b.environmental_standards_process_国V" coefficient="-0.3300940638544551"/>
+			<NumericPredictor name="car_info.b.environmental_standards_process_国VI" coefficient="-0.7745006943634372"/>
+			<NumericPredictor name="car_info.b.fuel_form_standards_process_2" coefficient="1.8154937132681557"/>
+			<NumericPredictor name="car_info.b.fuel_form_standards_process_3" coefficient="-0.09567045447036478"/>
+			<NumericPredictor name="car_info.b.fuel_form_standards_process_5" coefficient="-0.08847030337865829"/>
+			<NumericPredictor name="car_info.b.fuel_form_standards_process_6" coefficient="-1.4555518907469807"/>
+			<NumericPredictor name="car_info.b.fuel_form_standards_process_7" coefficient="-1.5586598305529922"/>
+			<NumericPredictor name="car_info.b.gear_box_process_2" coefficient="-0.131038251123857"/>
+			<NumericPredictor name="car_info.b.gear_box_process_3" coefficient="-0.06444473005028906"/>
+			<NumericPredictor name="car_info.b.import_type_process_1" coefficient="1.1989008995009534"/>
+			<NumericPredictor name="car_info.b.import_type_process_2" coefficient="0.05827968251265897"/>
+			<NumericPredictor name="car_info.b.import_type_process_3" coefficient="-1.7782352540525477"/>
+			<NumericPredictor name="car_info.b.import_type_process_4" coefficient="-0.10989061443716744"/>
+			<NumericPredictor name="seller_info.b.gender_0" coefficient="-0.26917468531394456"/>
+			<NumericPredictor name="seller_info.b.gender_1" coefficient="-0.19747249183017387"/>
+			<NumericPredictor name="seller_info.b.is_xiaoquan_0" coefficient="-1.0321409633193124"/>
+			<NumericPredictor name="seller_info.b.is_xiaoquan_1" coefficient="1.0365421959263545"/>
+			<NumericPredictor name="seller_info.b.isauthenticate_0" coefficient="0.13931079107195685"/>
+			<NumericPredictor name="seller_info.b.isauthenticate_1" coefficient="-0.1349095584648373"/>
+			<NumericPredictor name="seller_info.b.user_attribute_00974" coefficient="0.027757789978600053"/>
+			<NumericPredictor name="seller_info.b.user_attribute_02272" coefficient="-0.2081927633536772"/>
+			<NumericPredictor name="seller_info.b.user_attribute_大域" coefficient="-0.8517059899442248"/>
+			<NumericPredictor name="seller_info.b.user_attribute_小圈" coefficient="1.0365421959263545"/>
+			<NumericPredictor name="seller_info.b.is_chongbao_0" coefficient="-0.6712319680799775"/>
+			<NumericPredictor name="seller_info.b.is_chongbao_01398" coefficient="0.027757789978600053"/>
+			<NumericPredictor name="seller_info.b.is_chongbao_1" coefficient="0.8560681740625788"/>
+			<NumericPredictor name="seller_info.b.is_chongbao_四川" coefficient="-0.2081927633536772"/>
+			<NumericPredictor name="seller_info.b.is_chujia_0" coefficient="0.3946011556075242"/>
+			<NumericPredictor name="seller_info.b.is_chujia_1" coefficient="-0.20976494962406803"/>
+			<NumericPredictor name="seller_info.b.is_chujia_大域" coefficient="-0.2081927633536772"/>
+			<NumericPredictor name="seller_info.b.is_chujia_浙江" coefficient="0.027757789978600053"/>
+			<NumericPredictor name="seller_info.b.is_chengjiao_0" coefficient="0.12988784839716483"/>
+			<NumericPredictor name="seller_info.b.is_chengjiao_1" coefficient="-0.15324440575963974"/>
+			<NumericPredictor name="seller_info.b.is_liulan_365_0" coefficient="-0.16445043631922673"/>
+			<NumericPredictor name="seller_info.b.is_liulan_365_1" coefficient="0.1410938789513027"/>
+			<NumericPredictor name="seller_info.b.is_chengjiao_365_0" coefficient="-0.09269777961266881"/>
+			<NumericPredictor name="seller_info.b.is_chengjiao_365_1" coefficient="0.09709901222561339"/>
+			<NumericPredictor name="seller_info.b.is_liulan_0" coefficient="0.07150011701296129"/>
+			<NumericPredictor name="seller_info.b.is_liulan_1" coefficient="-0.06709888440198829"/>
+			<NumericPredictor name="seller_info.b.is_first_chengjiao_7_0" coefficient="-0.25301472598504504"/>
+			<NumericPredictor name="seller_info.b.is_first_chengjiao_7_1" coefficient="0.2574159585962587"/>
+			<NumericPredictor name="seller_info.b.inputsource_1.0" coefficient="-0.3375577288644754"/>
+			<NumericPredictor name="seller_info.b.inputsource_2.0" coefficient="0.9064794880707098"/>
+			<NumericPredictor name="seller_info.b.inputsource_4.0" coefficient="-0.15638717840938832"/>
+			<NumericPredictor name="seller_info.b.inputsource_5.0" coefficient="-0.3657324141424423"/>
+			<NumericPredictor name="seller_info.b.inputsource_7.0" coefficient="0.8492715247975777"/>
+			<NumericPredictor name="seller_info.b.inputsource_41.0" coefficient="0.45289141597450333"/>
+			<NumericPredictor name="seller_info.b.inputsource_91.0" coefficient="0.3964602128087382"/>
+			<NumericPredictor name="seller_info.b.inputsource_92.0" coefficient="-1.3254884157322917"/>
+			<NumericPredictor name="seller_info.b.inputsource_96.0" coefficient="-0.20734290853036777"/>
+			<NumericPredictor name="seller_info.b.buyerlevel_0.0" coefficient="0.2305501770254786"/>
+			<NumericPredictor name="seller_info.b.buyerlevel_1.0" coefficient="0.4442845082677091"/>
+			<NumericPredictor name="seller_info.b.buyerlevel_2.0" coefficient="-2.5770443902634765"/>
+			<NumericPredictor name="seller_info.b.buyerlevel_3.0" coefficient="-0.02457224247287351"/>
+			<NumericPredictor name="seller_info.b.buyerlevel_4.0" coefficient="-1.590971100412699"/>
+			<NumericPredictor name="seller_info.c.begintime_first_weekday_星期一" coefficient="0.09723454254129403"/>
+			<NumericPredictor name="seller_info.c.begintime_first_weekday_星期三" coefficient="-0.13331624433657008"/>
+			<NumericPredictor name="seller_info.c.begintime_first_weekday_星期二" coefficient="-0.08230272461231457"/>
+			<NumericPredictor name="seller_info.c.begintime_first_weekday_星期五" coefficient="0.17714912481461167"/>
+			<NumericPredictor name="seller_info.c.begintime_first_weekday_星期六" coefficient="0.13755111413940033"/>
+			<NumericPredictor name="seller_info.c.begintime_first_weekday_星期四" coefficient="-0.2697719370132821"/>
+			<NumericPredictor name="seller_info.c.begintime_first_weekday_星期天" coefficient="0.25829233045664557"/>
+			<NumericPredictor name="seller_info.c.begintime_first_hourbin_0~6h" coefficient="1.2952131154822704"/>
+			<NumericPredictor name="seller_info.c.begintime_first_hourbin_10~12h" coefficient="-0.37366631204672884"/>
+			<NumericPredictor name="seller_info.c.begintime_first_hourbin_12~14h" coefficient="-0.23974687443131937"/>
+			<NumericPredictor name="seller_info.c.begintime_first_hourbin_14~17h" coefficient="-0.421230326500721"/>
+			<NumericPredictor name="seller_info.c.begintime_first_hourbin_17~20h" coefficient="-0.5336139198152654"/>
+			<NumericPredictor name="seller_info.c.begintime_first_hourbin_20~22h" coefficient="-1.0690115283136485"/>
+			<NumericPredictor name="seller_info.c.begintime_first_hourbin_22~24h" coefficient="1.4129145571321062"/>
+			<NumericPredictor name="seller_info.c.begintime_first_hourbin_6~8h" coefficient="0.6441681059336588"/>
+			<NumericPredictor name="seller_info.c.begintime_first_hourbin_8~10h" coefficient="-0.530190611448505"/>
+			<NumericPredictor name="car_info.a.rankleveldesc_35B" coefficient="1.5114181217750915"/>
+			<NumericPredictor name="car_info.a.rankleveldesc_35C" coefficient="-0.8265511001694078"/>
+			<NumericPredictor name="car_info.a.rankleveldesc_35D" coefficient="-0.2992325088865068"/>
+			<NumericPredictor name="car_info.a.rankleveldesc_50A" coefficient="1.1690529307913027"/>
+			<NumericPredictor name="car_info.a.rankleveldesc_50B" coefficient="-0.8162902017500294"/>
+			<NumericPredictor name="car_info.a.rankleveldesc_50C" coefficient="-0.2110761115200695"/>
+			<NumericPredictor name="car_info.a.rankleveldesc_50D" coefficient="-0.1962347311163018"/>
+			<NumericPredictor name="car_info.a.rankleveldesc_65A" coefficient="-1.7240149687569533"/>
+			<NumericPredictor name="car_info.a.rankleveldesc_65B" coefficient="-0.23893072297321305"/>
+			<NumericPredictor name="car_info.a.rankleveldesc_65C" coefficient="0.44635398366412765"/>
+			<NumericPredictor name="car_info.a.rankleveldesc_65D" coefficient="0.7474662156572296"/>
+			<NumericPredictor name="car_info.a.rankleveldesc_80A" coefficient="-0.022175336975293045"/>
+			<NumericPredictor name="car_info.a.rankleveldesc_80B" coefficient="-0.9321892709933449"/>
+			<NumericPredictor name="car_info.a.rankleveldesc_80C" coefficient="0.7524186482974068"/>
+			<NumericPredictor name="car_info.a.rankleveldesc_80D" coefficient="-0.16525052212892696"/>
+			<NumericPredictor name="car_info.a.rankleveldesc_90A" coefficient="0.08631390656818948"/>
+			<NumericPredictor name="car_info.a.rankleveldesc_95A" coefficient="-0.4627419254411099"/>
+			<NumericPredictor name="car_info.a.rankleveldesc_95B" coefficient="1.1860648265706566"/>
+			<NumericPredictor name="car_info.a.sweptvolume_process_1.0~1.5" coefficient="-0.532846436996748"/>
+			<NumericPredictor name="car_info.a.sweptvolume_process_1.5~2.0" coefficient="-0.2134991251692805"/>
+			<NumericPredictor name="car_info.a.sweptvolume_process_2.0~2.5" coefficient="0.12598531909910876"/>
+			<NumericPredictor name="car_info.a.sweptvolume_process_2.5~3.0" coefficient="0.21883322095985816"/>
+			<NumericPredictor name="car_info.a.sweptvolume_process_&lt;1.0" coefficient="-0.05239357993737436"/>
+			<NumericPredictor name="car_info.a.sweptvolume_process_&gt;3.0" coefficient="0.45832183465981097"/>
+			<NumericPredictor name="car_info.a.car_age_process_1~3" coefficient="0.06157984342023382"/>
+			<NumericPredictor name="car_info.a.car_age_process_3~6" coefficient="0.4374798676044369"/>
+			<NumericPredictor name="car_info.a.car_age_process_6~10" coefficient="-0.2516701039819683"/>
+			<NumericPredictor name="car_info.a.car_age_process_&lt;1" coefficient="0.03440037056093107"/>
+			<NumericPredictor name="car_info.a.car_age_process_&gt;10" coefficient="-0.27738874499313976"/>
+			<NumericPredictor name="car_info.a.mileage_process_10~15" coefficient="-0.3101911214026979"/>
+			<NumericPredictor name="car_info.a.mileage_process_15~25" coefficient="-0.5781447554510362"/>
+			<NumericPredictor name="car_info.a.mileage_process_25~50" coefficient="0.5894570240485267"/>
+			<NumericPredictor name="car_info.a.mileage_process_2~5" coefficient="-0.44671787929171697"/>
+			<NumericPredictor name="car_info.a.mileage_process_5~10" coefficient="-0.27849951952027935"/>
+			<NumericPredictor name="car_info.a.mileage_process_&lt;2" coefficient="-0.5408034184144398"/>
+			<NumericPredictor name="car_info.car_age_and_mileage_age1~3&amp;mileage10~15" coefficient="-0.08902401966551741"/>
+			<NumericPredictor name="car_info.car_age_and_mileage_age1~3&amp;mileage15~25" coefficient="-1.0966062864767385"/>
+			<NumericPredictor name="car_info.car_age_and_mileage_age1~3&amp;mileage25~50" coefficient="0.8291361467588441"/>
+			<NumericPredictor name="car_info.car_age_and_mileage_age1~3&amp;mileage2~5" coefficient="0.337477207014872"/>
+			<NumericPredictor name="car_info.car_age_and_mileage_age1~3&amp;mileage5~10" coefficient="-0.27671016303611273"/>
+			<NumericPredictor name="car_info.car_age_and_mileage_age1~3&amp;mileage&lt;2" coefficient="0.3573069588247287"/>
+			<NumericPredictor name="car_info.car_age_and_mileage_age3~6&amp;mileage10~15" coefficient="-0.492318933991739"/>
+			<NumericPredictor name="car_info.car_age_and_mileage_age3~6&amp;mileage15~25" coefficient="-0.17366670736800036"/>
+			<NumericPredictor name="car_info.car_age_and_mileage_age3~6&amp;mileage25~50" coefficient="1.2742171865421557"/>
+			<NumericPredictor name="car_info.car_age_and_mileage_age3~6&amp;mileage2~5" coefficient="-0.3276708661743589"/>
+			<NumericPredictor name="car_info.car_age_and_mileage_age3~6&amp;mileage5~10" coefficient="-0.33581013804822724"/>
+			<NumericPredictor name="car_info.car_age_and_mileage_age3~6&amp;mileage&lt;2" coefficient="-0.6720149226948712"/>
+			<NumericPredictor name="car_info.car_age_and_mileage_age6~10&amp;mileage10~15" coefficient="0.10638673406236096"/>
+			<NumericPredictor name="car_info.car_age_and_mileage_age6~10&amp;mileage15~25" coefficient="0.3554604858577822"/>
+			<NumericPredictor name="car_info.car_age_and_mileage_age6~10&amp;mileage25~50" coefficient="-0.6893293607450878"/>
+			<NumericPredictor name="car_info.car_age_and_mileage_age6~10&amp;mileage2~5" coefficient="0.5861959225417984"/>
+			<NumericPredictor name="car_info.car_age_and_mileage_age6~10&amp;mileage5~10" coefficient="0.17257620610410765"/>
+			<NumericPredictor name="car_info.car_age_and_mileage_age6~10&amp;mileage&lt;2" coefficient="-0.43892578988008657"/>
+			<NumericPredictor name="car_info.car_age_and_mileage_age&lt;1&amp;mileage2~5" coefficient="-0.24352383286524285"/>
+			<NumericPredictor name="car_info.car_age_and_mileage_age&lt;1&amp;mileage5~10" coefficient="-0.0025397064832819506"/>
+			<NumericPredictor name="car_info.car_age_and_mileage_age&lt;1&amp;mileage&lt;2" coefficient="0.2787113497224844"/>
+			<NumericPredictor name="car_info.car_age_and_mileage_age&gt;10&amp;mileage10~15" coefficient="0.16476509819264862"/>
+			<NumericPredictor name="car_info.car_age_and_mileage_age&gt;10&amp;mileage15~25" coefficient="0.33666775253559017"/>
+			<NumericPredictor name="car_info.car_age_and_mileage_age&gt;10&amp;mileage25~50" coefficient="-0.8245669485070245"/>
+			<NumericPredictor name="car_info.car_age_and_mileage_age&gt;10&amp;mileage2~5" coefficient="-0.79919630980769"/>
+			<NumericPredictor name="car_info.car_age_and_mileage_age&gt;10&amp;mileage5~10" coefficient="0.1639842819436187"/>
+			<NumericPredictor name="car_info.car_age_and_mileage_age&gt;10&amp;mileage&lt;2" coefficient="-0.06588101438721723"/>
+			<NumericPredictor name="car_info.a.tradetimes_bin_ &lt;= 0" coefficient="-0.05341667099054644"/>
+			<NumericPredictor name="car_info.a.tradetimes_bin_ &gt; 0" coefficient="-0.006768400297890321"/>
+			<NumericPredictor name="car_info.b.site_num_bin_ &lt;= 2" coefficient="-0.25977326165995657"/>
+			<NumericPredictor name="car_info.b.site_num_bin_2~4" coefficient="-0.33660055231554625"/>
+			<NumericPredictor name="car_info.b.site_num_bin_&gt;4" coefficient="0.00676750229740496"/>
+			<NumericPredictor name="car_info.b.engine_volume_bin_ &lt;= 1598" coefficient="-0.5149751785727905"/>
+			<NumericPredictor name="car_info.b.engine_volume_bin_1598~1991" coefficient="-0.4864841891409582"/>
+			<NumericPredictor name="car_info.b.engine_volume_bin_&gt;1991" coefficient="-0.7983307389182069"/>
+			<NumericPredictor name="car_info.b.length_bin_ &lt;= 4530" coefficient="-0.12883696186249047"/>
+			<NumericPredictor name="car_info.b.length_bin_4530~4670" coefficient="-0.2260154919602387"/>
+			<NumericPredictor name="car_info.b.length_bin_&gt;4670" coefficient="-0.21733360717095715"/>
+			<NumericPredictor name="car_info.b.width_bin_ &lt;= 1773" coefficient="-0.21320897487908308"/>
+			<NumericPredictor name="car_info.b.width_bin_1773~1820" coefficient="-0.19258470271049777"/>
+			<NumericPredictor name="car_info.b.width_bin_&gt;1820" coefficient="-0.16639238340167578"/>
+			<NumericPredictor name="car_info.b.height_bin_ &lt;= 1480" coefficient="-0.29186400747099894"/>
+			<NumericPredictor name="car_info.b.height_bin_1480~1530" coefficient="0.019344825740330564"/>
+			<NumericPredictor name="car_info.b.height_bin_&gt;1530" coefficient="-0.299666879256702"/>
+			<NumericPredictor name="car_info.b.official_oil_wear_bin_ &lt;= 7" coefficient="0.29137266214361485"/>
+			<NumericPredictor name="car_info.b.official_oil_wear_bin_7~8" coefficient="-0.08290056085298683"/>
+			<NumericPredictor name="car_info.b.official_oil_wear_bin_&gt;8" coefficient="-0.24094718844788535"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_ &lt;= 2500000" coefficient="1.5218799100150913"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_10000000~12500000" coefficient="0.016897631092434317"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_12500000~15000000" coefficient="-0.08657736188922051"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_15000000~20000000" coefficient="-0.19483599077434077"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_20000000~25000000" coefficient="0.391151196050137"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_25000000~30000000" coefficient="0.20034115588103488"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_2500000~5000000" coefficient="0.08077628655650929"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_30000000~35000000" coefficient="-0.9502395698362442"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_35000000~40000000" coefficient="-0.10508390761452242"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_40000000~50000000" coefficient="0.2514945303278545"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_50000000~60000000" coefficient="-0.3972032025247727"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_5000000~7500000" coefficient="0.22568315632419772"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_7500000~10000000" coefficient="0.45412857040111193"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_&gt;60000000" coefficient="0.21281057504888412"/>
+			<NumericPredictor name="car_info.b.first_year_keepvalue_bin_ &lt;= 0.65" coefficient="0.2911429946562227"/>
+			<NumericPredictor name="car_info.b.first_year_keepvalue_bin_0.65~0.754" coefficient="8.887687395635303E-4"/>
+			<NumericPredictor name="car_info.b.first_year_keepvalue_bin_&gt;0.754" coefficient="-0.34347836864387715"/>
+			<NumericPredictor name="car_info.b.third_year_keepvalue_bin_ &lt;= 0.49" coefficient="-0.2438304057377306"/>
+			<NumericPredictor name="car_info.b.third_year_keepvalue_bin_0.49~0.6" coefficient="-2.7247999086590333E-4"/>
+			<NumericPredictor name="car_info.b.third_year_keepvalue_bin_&gt;0.6" coefficient="0.19265628047115302"/>
+			<NumericPredictor name="car_info.dljc_ss_bin_ &lt;= 0" coefficient="-1.4182412406223277"/>
+			<NumericPredictor name="car_info.wgjc_bx_bin_ &lt;= 7" coefficient="-0.6187652376898962"/>
+			<NumericPredictor name="car_info.wgjc_bx_bin_7~13" coefficient="-0.4203659886280261"/>
+			<NumericPredictor name="car_info.wgjc_bx_bin_&gt;13" coefficient="-0.37911001430296937"/>
+			<NumericPredictor name="car_info.wgjc_gc_bin_ &lt;= 11" coefficient="-0.3268668553459889"/>
+			<NumericPredictor name="car_info.wgjc_gc_bin_11~17" coefficient="-0.5487399414333113"/>
+			<NumericPredictor name="car_info.wgjc_gc_bin_&gt;17" coefficient="-0.5426344438414983"/>
+			<NumericPredictor name="car_info.wgjc_hh_bin_ &lt;= 7" coefficient="-0.5506643672912702"/>
+			<NumericPredictor name="car_info.wgjc_hh_bin_7~12" coefficient="-0.4012287351449921"/>
+			<NumericPredictor name="car_info.wgjc_hh_bin_&gt;12" coefficient="-0.4663481381869092"/>
+			<NumericPredictor name="car_info.wgjc_czq_bin_ &lt;= 0" coefficient="-0.37170601765955624"/>
+			<NumericPredictor name="car_info.wgjc_czq_bin_0~6" coefficient="-0.3281472626128631"/>
+			<NumericPredictor name="car_info.wgjc_czq_bin_6~16" coefficient="-0.2280416382273543"/>
+			<NumericPredictor name="car_info.wgjc_czq_bin_&gt;16" coefficient="-0.49034632212351276"/>
+			<NumericPredictor name="car_info.cnjc_ms_ps_bin_ &lt;= 6" coefficient="-0.38553779206773797"/>
+			<NumericPredictor name="car_info.cnjc_ms_ps_bin_6~10" coefficient="-0.5641376350721975"/>
+			<NumericPredictor name="car_info.cnjc_ms_ps_bin_&gt;10" coefficient="-0.4685658134850776"/>
+			<NumericPredictor name="car_info.cnjc_hh_bin_ &lt;= 2" coefficient="-0.37978063700036346"/>
+			<NumericPredictor name="car_info.cnjc_hh_bin_2~5" coefficient="-0.46837250973571926"/>
+			<NumericPredictor name="car_info.cnjc_hh_bin_&gt;5" coefficient="-0.5700880938815741"/>
+			<NumericPredictor name="car_info.model_order_num_pre180_bin_ &lt;= 3" coefficient="-0.049188860024540794"/>
+			<NumericPredictor name="car_info.model_order_num_pre180_bin_3~9" coefficient="-0.08725529508214987"/>
+			<NumericPredictor name="car_info.model_order_num_pre180_bin_9~20" coefficient="-0.015578179721406607"/>
+			<NumericPredictor name="car_info.model_order_num_pre180_bin_&gt;20" coefficient="-0.005664711772602522"/>
+			<NumericPredictor name="car_info.model_bids_num_pre180_bin_ &lt;= 100" coefficient="-0.05006371194299761"/>
+			<NumericPredictor name="car_info.model_bids_num_pre180_bin_100~300" coefficient="-0.07490548684946025"/>
+			<NumericPredictor name="car_info.model_bids_num_pre180_bin_300~700" coefficient="-0.05030446704197347"/>
+			<NumericPredictor name="car_info.model_bids_num_pre180_bin_&gt;700" coefficient="0.017586619228598076"/>
+			<NumericPredictor name="car_info.model_order_bids_rate_pre180_bin_ &lt;= 0.029" coefficient="-0.553399240573435"/>
+			<NumericPredictor name="car_info.model_order_bids_rate_pre180_bin_0.029~0.045" coefficient="-0.46973146305337515"/>
+			<NumericPredictor name="car_info.model_order_bids_rate_pre180_bin_&gt;0.045" coefficient="-0.5394734321484057"/>
+			<NumericPredictor name="car_info.series_order_num_pre180_bin_ &lt;= 50" coefficient="-0.09002856501086756"/>
+			<NumericPredictor name="car_info.series_order_num_pre180_bin_150~300" coefficient="-0.09979750482993585"/>
+			<NumericPredictor name="car_info.series_order_num_pre180_bin_50~150" coefficient="-0.026702288495160105"/>
+			<NumericPredictor name="car_info.series_order_num_pre180_bin_&gt;300" coefficient="-0.0433185211006413"/>
+			<NumericPredictor name="car_info.series_bids_num_pre180_bin_ &lt;= 1000" coefficient="-0.10815050530985221"/>
+			<NumericPredictor name="car_info.series_bids_num_pre180_bin_1000~4800" coefficient="-0.031011087768858775"/>
+			<NumericPredictor name="car_info.series_bids_num_pre180_bin_4800~12000" coefficient="0.016793592799489346"/>
+			<NumericPredictor name="car_info.series_bids_num_pre180_bin_&gt;12000" coefficient="-0.13747887915302354"/>
+			<NumericPredictor name="car_info.series_order_bids_rate_pre180_bin_ &lt;= 0.028" coefficient="-0.2943803800185195"/>
+			<NumericPredictor name="car_info.series_order_bids_rate_pre180_bin_0.028~0.042" coefficient="-0.31738204372309714"/>
+			<NumericPredictor name="car_info.series_order_bids_rate_pre180_bin_&gt;0.042" coefficient="0.008089869819611442"/>
+			<NumericPredictor name="car_info.model_order_num_pre15_bin_未知" coefficient="0.0044012326087099546"/>
+			<NumericPredictor name="car_info.model_order_num_pre15_diff_bin_未知" coefficient="0.0044012326087099546"/>
+			<NumericPredictor name="car_info.series_order_num_pre15_bin_未知" coefficient="0.0044012326087099546"/>
+			<NumericPredictor name="car_info.series_order_num_pre15_diff_bin_未知" coefficient="0.0044012326087099546"/>
+			<NumericPredictor name="car_info.a.publishyear_delta_bin_ &lt;= 2" coefficient="-0.3039734206613096"/>
+			<NumericPredictor name="car_info.a.publishyear_delta_bin_2~3" coefficient="-0.01366076007202977"/>
+			<NumericPredictor name="car_info.a.publishyear_delta_bin_&gt;3" coefficient="0.32203541334497465"/>
+			<NumericPredictor name="car_info.a.insureexpired_diffdays_bin_ &lt;= 114" coefficient="0.04948740248489345"/>
+			<NumericPredictor name="car_info.a.insureexpired_diffdays_bin_114~226" coefficient="-0.07265381526235647"/>
+			<NumericPredictor name="car_info.a.insureexpired_diffdays_bin_&gt;226" coefficient="0.027567645385640428"/>
+			<NumericPredictor name="car_info.a.inspectexpired_diffdays_bin_ &lt;= 144" coefficient="-0.03699084813620667"/>
+			<NumericPredictor name="car_info.a.inspectexpired_diffdays_bin_144~260" coefficient="-0.03475571918014438"/>
+			<NumericPredictor name="car_info.a.inspectexpired_diffdays_bin_&gt;260" coefficient="0.07614779993510552"/>
+			<NumericPredictor name="car_info.b.twoyear_residual_ratio_bin_ &lt;= 0.07" coefficient="-0.11063492839695778"/>
+			<NumericPredictor name="car_info.b.twoyear_residual_ratio_bin_ &gt; 0.07" coefficient="0.059188323148165536"/>
+			<NumericPredictor name="car_info.dealerBuyResidual_bin_未知" coefficient="0.0044012326087099546"/>
+			<NumericPredictor name="seller_info.b.unpurchased_days_bin_ &lt;= 298" coefficient="-0.11413337528375174"/>
+			<NumericPredictor name="seller_info.b.unpurchased_days_bin_298~314" coefficient="-0.25008979404406534"/>
+			<NumericPredictor name="seller_info.b.unpurchased_days_bin_&gt;314" coefficient="0.030543790192444922"/>
+			<NumericPredictor name="seller_info.b.open_cyp_app_7_bin_ &lt;= 0" coefficient="-0.1850507204451159"/>
+			<NumericPredictor name="seller_info.b.open_cyp_app_7_bin_ &gt; 0" coefficient="0.1894519530560057"/>
+			<NumericPredictor name="seller_info.b.open_cyp_app_30_bin_ &lt;= 0" coefficient="0.2815847479178963"/>
+			<NumericPredictor name="seller_info.b.open_cyp_app_30_bin_ &gt; 0" coefficient="-0.06899075195467952"/>
+			<NumericPredictor name="seller_info.d1.buy_num_his_bin_ &lt;= 8" coefficient="-0.3326987100424932"/>
+			<NumericPredictor name="seller_info.d1.buy_num_his_bin_8~12" coefficient="1.0580871231347244"/>
+			<NumericPredictor name="seller_info.d1.buy_num_his_bin_&gt;12" coefficient="0.5022806820491904"/>
+			<NumericPredictor name="seller_info.d1.buy_num_pre30_bin_ &lt;= 0" coefficient="1.1999113051628219"/>
+			<NumericPredictor name="seller_info.d2.seller_num_his_bin_ &lt;= 100" coefficient="0.3474202121523164"/>
+			<NumericPredictor name="seller_info.d2.seller_num_his_bin_100~400" coefficient="0.4803948933718041"/>
+			<NumericPredictor name="seller_info.d2.seller_num_his_bin_400~800" coefficient="0.2980167657669382"/>
+			<NumericPredictor name="seller_info.d2.seller_num_his_bin_800~1100" coefficient="-0.012988894942148674"/>
+			<NumericPredictor name="seller_info.d2.seller_num_his_bin_&gt;1100" coefficient="0.07854744686897076"/>
+			<NumericPredictor name="seller_info.d2.seller_num_pre30_bin_ &lt;= 30" coefficient="0.5210442788587227"/>
+			<NumericPredictor name="seller_info.d2.seller_num_pre30_bin_30~88" coefficient="0.14773640923355277"/>
+			<NumericPredictor name="seller_info.d2.seller_num_pre30_bin_&gt;88" coefficient="0.31441697177351824"/>
+			<NumericPredictor name="seller_info.e.xinli_price_bin_ &lt;= 38000" coefficient="-0.16153939953697402"/>
+			<NumericPredictor name="seller_info.e.xinli_price_bin_38000~69100" coefficient="0.19395501858734632"/>
+			<NumericPredictor name="seller_info.e.xinli_price_bin_&gt;69100" coefficient="0.293651529572421"/>
+			<NumericPredictor name="seller_info.e.qipai_price_bin_ &lt;= 7000" coefficient="0.06007119877179071"/>
+			<NumericPredictor name="seller_info.e.qipai_price_bin_15000~30000" coefficient="-0.05820960988300377"/>
+			<NumericPredictor name="seller_info.e.qipai_price_bin_7000~15000" coefficient="-0.13691359616723367"/>
+			<NumericPredictor name="seller_info.e.qipai_price_bin_&gt;30000" coefficient="0.05097359675185043"/>
+			<NumericPredictor name="seller_info.e.baoliu_price_bin_ &lt;= 25000" coefficient="-1.857552664255406"/>
+			<NumericPredictor name="seller_info.e.baoliu_price_bin_100000~125000" coefficient="-0.721531198545632"/>
+			<NumericPredictor name="seller_info.e.baoliu_price_bin_125000~150000" coefficient="0.29450751319899243"/>
+			<NumericPredictor name="seller_info.e.baoliu_price_bin_150000~200000" coefficient="-0.9079224230421308"/>
+			<NumericPredictor name="seller_info.e.baoliu_price_bin_200000~250000" coefficient="0.08000771050220935"/>
+			<NumericPredictor name="seller_info.e.baoliu_price_bin_250000~300000" coefficient="0.8620703335728489"/>
+			<NumericPredictor name="seller_info.e.baoliu_price_bin_25000~50000" coefficient="-0.46833403065995544"/>
+			<NumericPredictor name="seller_info.e.baoliu_price_bin_300000~350000" coefficient="1.5803314218313889"/>
+			<NumericPredictor name="seller_info.e.baoliu_price_bin_350000~400000" coefficient="0.8578655258006489"/>
+			<NumericPredictor name="seller_info.e.baoliu_price_bin_400000~500000" coefficient="-0.10024525520171551"/>
+			<NumericPredictor name="seller_info.e.baoliu_price_bin_500000~600000" coefficient="-0.05476691743006248"/>
+			<NumericPredictor name="seller_info.e.baoliu_price_bin_50000~75000" coefficient="-0.9885129538646776"/>
+			<NumericPredictor name="seller_info.e.baoliu_price_bin_75000~100000" coefficient="-0.5486386930324162"/>
+			<NumericPredictor name="seller_info.e.baoliu_price_bin_&gt;600000" coefficient="1.888643220602716"/>
+			<NumericPredictor name="seller_info.b.registdate_diffdays_bin_ &lt;= -1" coefficient="0.8513107279079936"/>
+			<NumericPredictor name="seller_info.b.registdate_diffdays_bin_-1~0" coefficient="7.310456983333146E-6"/>
+			<NumericPredictor name="seller_info.b.registdate_diffdays_bin_0~90" coefficient="0.42449483291039414"/>
+			<NumericPredictor name="seller_info.b.registdate_diffdays_bin_180~365" coefficient="-0.17016997887378277"/>
+			<NumericPredictor name="seller_info.b.registdate_diffdays_bin_365~730" coefficient="0.13849925160437698"/>
+			<NumericPredictor name="seller_info.b.registdate_diffdays_bin_730~1095" coefficient="-0.00623629909282064"/>
+			<NumericPredictor name="seller_info.b.registdate_diffdays_bin_90~180" coefficient="-0.2963438697653216"/>
+			<NumericPredictor name="seller_info.b.registdate_diffdays_bin_&gt;1095" coefficient="-0.9371607425319624"/>
+			<NumericPredictor name="seller_info.e.service_price_bin_ &lt;= 0" coefficient="-2.3715579169656245"/>
+			<NumericPredictor name="seller_info.e.service_price_bin_0~1000" coefficient="1.5713250353623056"/>
+			<NumericPredictor name="seller_info.e.service_price_bin_&gt;1000" coefficient="0.7161544710857611"/>
+			<NumericPredictor name="seller_info.f.seller_auction_cyp_num_bin_ &lt;= 1366" coefficient="0.28319946283476183"/>
+			<NumericPredictor name="seller_info.f.seller_auction_cyp_num_bin_1366~3354" coefficient="-0.3372255304859313"/>
+			<NumericPredictor name="seller_info.f.seller_auction_cyp_num_bin_&gt;3354" coefficient="-0.3517182588721161"/>
+			<NumericPredictor name="seller_info.f.seller_auction_cyp_deal_num_bin_ &lt;= 824" coefficient="0.15961764905255338"/>
+			<NumericPredictor name="seller_info.f.seller_auction_cyp_deal_num_bin_824~1939" coefficient="-0.22226945093064485"/>
+			<NumericPredictor name="seller_info.f.seller_auction_cyp_deal_num_bin_&gt;1939" coefficient="0.275245797847903"/>
+			<NumericPredictor name="seller_info.f.seller_auction_cyp_up_price_num_bin_ &lt;= 2855" coefficient="0.24232169720255506"/>
+			<NumericPredictor name="seller_info.f.seller_auction_cyp_up_price_num_bin_2855~8129" coefficient="-0.004661906986723814"/>
+			<NumericPredictor name="seller_info.f.seller_auction_cyp_up_price_num_bin_&gt;8129" coefficient="-0.23325855760453695"/>
+			<NumericPredictor name="seller_info.f.seller_auction_cyp_up_price_seller_break_num_bin_ &lt;= 2" coefficient="-0.23157966362445323"/>
+			<NumericPredictor name="seller_info.f.seller_auction_cyp_up_price_seller_break_num_bin_2~7" coefficient="0.07034154094802199"/>
+			<NumericPredictor name="seller_info.f.seller_auction_cyp_up_price_seller_break_num_bin_&gt;7" coefficient="0.137881565320022"/>
+			<NumericPredictor name="seller_info.f.seller_auction_cyp_deal_seller_break_num_bin_ &lt;= 0" coefficient="0.18483620598418124"/>
+			<NumericPredictor name="seller_info.f.seller_auction_cyp_deal_seller_break_num_bin_ &gt; 0" coefficient="-0.18043497337507794"/>
+			<NumericPredictor name="seller_info.f.seller_auction_cyp_deal_ratio_bin_ &lt;= 0" coefficient="1.6641370566230005"/>
+			<NumericPredictor name="seller_info.f.seller_auction_cyp_deal_ratio_bin_ &gt; 0" coefficient="-1.6597358240148352"/>
+			<NumericPredictor name="seller_info.f.seller_auction_cyp_up_price_ratio_bin_ &lt;= 2" coefficient="0.44325521921571587"/>
+			<NumericPredictor name="seller_info.f.seller_auction_cyp_up_price_ratio_bin_2~3" coefficient="-0.029648691340376"/>
+			<NumericPredictor name="seller_info.f.seller_auction_cyp_up_price_ratio_bin_&gt;3" coefficient="-0.4092052952584648"/>
+			<NumericPredictor name="seller_info.f.seller_auction_cyp_up_price_seller_break_ratio_bin_ &lt;= 0" coefficient="-0.17183037477538166"/>
+			<NumericPredictor name="seller_info.f.seller_auction_cyp_up_price_seller_break_ratio_bin_ &gt; 0" coefficient="0.17623160738791224"/>
+			<NumericPredictor name="seller_info.f.seller_auction_cyp_deal_seller_break_ratio_bin_ &lt;= 0" coefficient="0.21259399596279113"/>
+			<NumericPredictor name="seller_info.f.seller_auction_cyp_deal_seller_break_ratio_bin_ &gt; 0" coefficient="-0.2081927633536772"/>
+			<NumericPredictor name="car_info.dealerRes_buy_rate_bin_未知" coefficient="0.0044012326087099546"/>
+			<NumericPredictor name="seller_info.e.baoliu_price_dealer_buy_bin_未知" coefficient="0.0044012326087099546"/>
+			<NumericPredictor name="seller_info.e.baoliu_price_dealer_buy_diffrate_bin_未知" coefficient="0.0044012326087099546"/>
+			<NumericPredictor name="platform_info.balance_user_num_bin_ &lt;= 0" coefficient="0.09070160531492419"/>
+			<NumericPredictor name="platform_info.balance_user_num_bin_0~5" coefficient="0.30937044538333763"/>
+			<NumericPredictor name="platform_info.balance_user_num_bin_10~15" coefficient="-0.6615365282389164"/>
+			<NumericPredictor name="platform_info.balance_user_num_bin_5~10" coefficient="-0.1433503937936401"/>
+			<NumericPredictor name="platform_info.balance_user_num_bin_&gt;15" coefficient="0.33278432929355506"/>
+			<NumericPredictor name="platform_info.view_user_num_pre7_bin_ &lt;= 0" coefficient="-0.14806371942692664"/>
+			<NumericPredictor name="platform_info.view_user_num_pre7_bin_0~50" coefficient="-0.29240607965463866"/>
+			<NumericPredictor name="platform_info.view_user_num_pre7_bin_50~100" coefficient="0.3684392570394426"/>
+			<NumericPredictor name="platform_info.view_num_pre7_bin_ &lt;= 0" coefficient="0.12528311971086578"/>
+			<NumericPredictor name="platform_info.view_num_pre7_bin_0~1500" coefficient="0.2822065174552088"/>
+			<NumericPredictor name="platform_info.view_num_pre7_bin_1500~4500" coefficient="-0.39346448319352817"/>
+			<NumericPredictor name="platform_info.view_num_pre7_bin_&gt;4500" coefficient="-0.08605569601578109"/>
+			<NumericPredictor name="platform_info.view_user_num_mean_pre7_bin_ &lt;= -0.25" coefficient="0.19700243919026392"/>
+			<NumericPredictor name="platform_info.view_user_num_mean_pre7_bin_-0.25~0.0" coefficient="0.12952913512554007"/>
+			<NumericPredictor name="platform_info.view_user_num_mean_pre7_bin_0.0~0.25" coefficient="-0.4885508506227354"/>
+			<NumericPredictor name="platform_info.view_user_num_mean_pre7_bin_&gt;0.25" coefficient="0.08998873426602715"/>
+			<NumericPredictor name="platform_info.focus_user_car_num_pre7_bin_ &lt;= -150" coefficient="-0.2375770718659093"/>
+			<NumericPredictor name="platform_info.focus_user_car_num_pre7_bin_-150~0" coefficient="-0.3599262137650339"/>
+			<NumericPredictor name="platform_info.focus_user_car_num_pre7_bin_0~80" coefficient="-0.22561973314202685"/>
+			<NumericPredictor name="platform_info.focus_user_car_num_pre7_bin_&gt;80" coefficient="0.7510924767322342"/>
+			<NumericPredictor name="platform_info.focus_user_num_pre7_bin_ &lt;= 0" coefficient="-0.14720689521185465"/>
+			<NumericPredictor name="platform_info.focus_user_num_pre7_bin_0~10" coefficient="0.29090758432380176"/>
+			<NumericPredictor name="platform_info.focus_user_num_pre7_bin_&gt;10" coefficient="-0.21573123115377593"/>
+			<NumericPredictor name="platform_info.user_bids_num_pre7_bin_ &lt;= -1500" coefficient="-0.2086809439589522"/>
+			<NumericPredictor name="platform_info.user_bids_num_pre7_bin_-1500~0" coefficient="0.11342184149100933"/>
+			<NumericPredictor name="platform_info.user_bids_num_pre7_bin_0~1500" coefficient="0.4225900995344239"/>
+			<NumericPredictor name="platform_info.user_bids_num_pre7_bin_&gt;1500" coefficient="-0.39936153910834404"/>
+			<NumericPredictor name="platform_info.bid_user_num_pre7_bin_ &lt;= 0" coefficient="0.33193279983508067"/>
+			<NumericPredictor name="platform_info.bid_user_num_pre7_bin_0~5" coefficient="-0.07768831450534953"/>
+			<NumericPredictor name="platform_info.bid_user_num_pre7_bin_5~15" coefficient="-0.044713184620650256"/>
+			<NumericPredictor name="platform_info.bid_user_num_pre7_bin_&gt;15" coefficient="-0.28156184274920903"/>
+			<NumericPredictor name="platform_info.order_num_pre7_bin_ &lt;= -50" coefficient="0.1358797099589771"/>
+			<NumericPredictor name="platform_info.order_num_pre7_bin_-50~0" coefficient="-0.14310449184778554"/>
+			<NumericPredictor name="platform_info.order_num_pre7_bin_0~30" coefficient="0.04711362727414958"/>
+			<NumericPredictor name="platform_info.order_num_pre7_bin_&gt;30" coefficient="-0.11191938742445204"/>
+			<NumericPredictor name="platform_info.order_num_mean_pre7_bin_ &lt;= -0.03" coefficient="0.041907137612654285"/>
+			<NumericPredictor name="platform_info.order_num_mean_pre7_bin_-0.03~0.0" coefficient="-0.18681346664382686"/>
+			<NumericPredictor name="platform_info.order_num_mean_pre7_bin_0.0~0.03" coefficient="-0.18181747922411692"/>
+			<NumericPredictor name="platform_info.order_num_mean_pre7_bin_&gt;0.03" coefficient="0.25469326621537414"/>
+			<NumericPredictor name="platform_info.user_bids_num_mean_pre7_bin_ &lt;= 37" coefficient="0.6382575490253101"/>
+			<NumericPredictor name="platform_info.user_bids_num_mean_pre7_bin_37~39" coefficient="-0.20098016840343533"/>
+			<NumericPredictor name="platform_info.user_bids_num_mean_pre7_bin_&gt;39" coefficient="-0.43287614800743757"/>
+			<NumericPredictor name="platform_info.order_user_bids_num_pre7_rate_bin_ &lt;= 0.0085" coefficient="0.2974918241727303"/>
+			<NumericPredictor name="platform_info.order_user_bids_num_pre7_rate_bin_ &gt; 0.0085" coefficient="-0.29309059156087097"/>
+			<NumericPredictor name="platform_info.bids_view_num_pre7_rate_bin_ &lt;= 0.16" coefficient="-0.019468139720654545"/>
+			<NumericPredictor name="platform_info.bids_view_num_pre7_rate_bin_ &gt; 0.16" coefficient="0.023869372335035034"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_ &lt;= 2500000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000" coefficient="0.7613540799828549"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_10000000~12500000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000" coefficient="-0.3673207874923929"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_10000000~12500000 &amp; seller_info.e.baoliu_price_bin_100000~125000" coefficient="-0.4159225039072463"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_10000000~12500000 &amp; seller_info.e.baoliu_price_bin_125000~150000" coefficient="0.5859570101217653"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_10000000~12500000 &amp; seller_info.e.baoliu_price_bin_150000~200000" coefficient="0.39881342491897964"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_10000000~12500000 &amp; seller_info.e.baoliu_price_bin_25000~50000" coefficient="-0.8644558800684"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_10000000~12500000 &amp; seller_info.e.baoliu_price_bin_50000~75000" coefficient="-0.18462516567320686"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_10000000~12500000 &amp; seller_info.e.baoliu_price_bin_75000~100000" coefficient="0.3354224156302032"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_12500000~15000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000" coefficient="0.07617473289738877"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_12500000~15000000 &amp; seller_info.e.baoliu_price_bin_100000~125000" coefficient="0.8357762506426832"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_12500000~15000000 &amp; seller_info.e.baoliu_price_bin_125000~150000" coefficient="2.8940397829856157"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_12500000~15000000 &amp; seller_info.e.baoliu_price_bin_150000~200000" coefficient="-0.657703939949784"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_12500000~15000000 &amp; seller_info.e.baoliu_price_bin_200000~250000" coefficient="0.07752219553672175"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_12500000~15000000 &amp; seller_info.e.baoliu_price_bin_25000~50000" coefficient="-0.9013180736945666"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_12500000~15000000 &amp; seller_info.e.baoliu_price_bin_50000~75000" coefficient="0.3584758542658888"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_12500000~15000000 &amp; seller_info.e.baoliu_price_bin_75000~100000" coefficient="0.08821646940202395"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_15000000~20000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000" coefficient="0.45756047899511076"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_15000000~20000000 &amp; seller_info.e.baoliu_price_bin_100000~125000" coefficient="0.46782167119989737"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_15000000~20000000 &amp; seller_info.e.baoliu_price_bin_125000~150000" coefficient="-0.05396112148788443"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_15000000~20000000 &amp; seller_info.e.baoliu_price_bin_150000~200000" coefficient="0.5360813349169717"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_15000000~20000000 &amp; seller_info.e.baoliu_price_bin_200000~250000" coefficient="0.9430039603787866"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_15000000~20000000 &amp; seller_info.e.baoliu_price_bin_250000~300000" coefficient="0.0678921098146042"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_15000000~20000000 &amp; seller_info.e.baoliu_price_bin_25000~50000" coefficient="-0.6882790047725369"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_15000000~20000000 &amp; seller_info.e.baoliu_price_bin_50000~75000" coefficient="0.04777899844795615"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_15000000~20000000 &amp; seller_info.e.baoliu_price_bin_75000~100000" coefficient="-0.29876566422156814"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_20000000~25000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000" coefficient="-0.2115811173693545"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_20000000~25000000 &amp; seller_info.e.baoliu_price_bin_100000~125000" coefficient="-0.4549595980840186"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_20000000~25000000 &amp; seller_info.e.baoliu_price_bin_125000~150000" coefficient="-1.616666110921197"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_20000000~25000000 &amp; seller_info.e.baoliu_price_bin_150000~200000" coefficient="-7.980417162269855E-5"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_20000000~25000000 &amp; seller_info.e.baoliu_price_bin_200000~250000" coefficient="-1.0119348259584149"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_20000000~25000000 &amp; seller_info.e.baoliu_price_bin_250000~300000" coefficient="-1.4286464955924836"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_20000000~25000000 &amp; seller_info.e.baoliu_price_bin_25000~50000" coefficient="-1.374180475821309"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_20000000~25000000 &amp; seller_info.e.baoliu_price_bin_50000~75000" coefficient="-1.0475312698790495"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_20000000~25000000 &amp; seller_info.e.baoliu_price_bin_75000~100000" coefficient="-0.8793918524693868"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_20000000~25000000 &amp; seller_info.e.baoliu_price_bin_&gt;600000" coefficient="1.0979015558869883E-4"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000" coefficient="0.22435516662967858"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_100000~125000" coefficient="-0.6723121048434372"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_125000~150000" coefficient="-0.8435923255620467"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_150000~200000" coefficient="0.24353398250087843"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_200000~250000" coefficient="0.8207880596945432"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_250000~300000" coefficient="0.9875413672840467"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_25000~50000" coefficient="-1.7152678686770508"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_300000~350000" coefficient="0.19486884750940175"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_50000~75000" coefficient="-0.1325666240731292"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_75000~100000" coefficient="-0.4641275184857373"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_25000000~30000000 &amp; seller_info.e.baoliu_price_bin_&gt;600000" coefficient="8.094554726362485E-6"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_2500000~5000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000" coefficient="-0.2819944116550197"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_2500000~5000000 &amp; seller_info.e.baoliu_price_bin_25000~50000" coefficient="-0.6104448106961328"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_2500000~5000000 &amp; seller_info.e.baoliu_price_bin_50000~75000" coefficient="0.5115759244410629"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_30000000~35000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000" coefficient="1.3993608205307007"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_30000000~35000000 &amp; seller_info.e.baoliu_price_bin_100000~125000" coefficient="1.2330383439260433"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_30000000~35000000 &amp; seller_info.e.baoliu_price_bin_125000~150000" coefficient="-0.06487699947199319"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_30000000~35000000 &amp; seller_info.e.baoliu_price_bin_150000~200000" coefficient="0.7983618094406771"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_30000000~35000000 &amp; seller_info.e.baoliu_price_bin_200000~250000" coefficient="0.42114568468597957"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_30000000~35000000 &amp; seller_info.e.baoliu_price_bin_250000~300000" coefficient="-0.5714883894187971"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_30000000~35000000 &amp; seller_info.e.baoliu_price_bin_25000~50000" coefficient="0.5508649510667256"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_30000000~35000000 &amp; seller_info.e.baoliu_price_bin_300000~350000" coefficient="1.4523768230599166"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_30000000~35000000 &amp; seller_info.e.baoliu_price_bin_50000~75000" coefficient="0.7105280765440207"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_30000000~35000000 &amp; seller_info.e.baoliu_price_bin_75000~100000" coefficient="1.3598552293398165"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000" coefficient="1.0962612133146654"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_100000~125000" coefficient="-1.2115365635965611"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_125000~150000" coefficient="-1.6622046428479758"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_150000~200000" coefficient="0.5799138931500255"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_200000~250000" coefficient="-1.1408468938837684"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_250000~300000" coefficient="-1.0949307004239315"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_25000~50000" coefficient="-1.6020278879385395"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_300000~350000" coefficient="0.9981622706136027"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_350000~400000" coefficient="0.7013065465995796"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_400000~500000" coefficient="0.7521860390569194"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_500000~600000" coefficient="0.7086305248371545"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_50000~75000" coefficient="-1.0977131181640376"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_35000000~40000000 &amp; seller_info.e.baoliu_price_bin_75000~100000" coefficient="-0.5393867082955085"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000" coefficient="-0.9357982842362927"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_100000~125000" coefficient="0.011880500584453026"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_125000~150000" coefficient="1.5096001177683445"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_150000~200000" coefficient="-0.5408579801640587"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_200000~250000" coefficient="-0.6788784948907198"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_250000~300000" coefficient="-0.0873195109407563"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_25000~50000" coefficient="0.0013206397939518662"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_300000~350000" coefficient="-3.2703989362271937"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_350000~400000" coefficient="-0.2887949819793462"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_400000~500000" coefficient="-0.8434938321974401"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_500000~600000" coefficient="0.5806778290871851"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_50000~75000" coefficient="0.04964354217954671"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_75000~100000" coefficient="-1.0584737555546613"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_40000000~50000000 &amp; seller_info.e.baoliu_price_bin_&gt;600000" coefficient="0.13784907725919807"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000" coefficient="1.944012576979029"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_100000~125000" coefficient="-1.6563286168693296"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_125000~150000" coefficient="-2.077233543173906"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_150000~200000" coefficient="-0.7916634902728747"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_200000~250000" coefficient="1.3514268045270201"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_250000~300000" coefficient="1.9183424987141404"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_25000~50000" coefficient="0.9991544570423196"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_300000~350000" coefficient="0.10802300342733426"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_400000~500000" coefficient="2.091847464062205"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_500000~600000" coefficient="-0.4928882794259437"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_50000~75000" coefficient="-0.13808076439294137"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_75000~100000" coefficient="0.43828183153262223"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_50000000~60000000 &amp; seller_info.e.baoliu_price_bin_&gt;600000" coefficient="0.13948486128426565"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_5000000~7500000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000" coefficient="-0.3825676609525634"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_5000000~7500000 &amp; seller_info.e.baoliu_price_bin_100000~125000" coefficient="0.6047859790287404"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_5000000~7500000 &amp; seller_info.e.baoliu_price_bin_25000~50000" coefficient="-1.3400884073708788"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_5000000~7500000 &amp; seller_info.e.baoliu_price_bin_50000~75000" coefficient="-1.2270639639466312"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_7500000~10000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000" coefficient="-0.48067166603016254"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_7500000~10000000 &amp; seller_info.e.baoliu_price_bin_100000~125000" coefficient="0.6675241419221883"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_7500000~10000000 &amp; seller_info.e.baoliu_price_bin_25000~50000" coefficient="-1.5188109886226004"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_7500000~10000000 &amp; seller_info.e.baoliu_price_bin_300000~350000" coefficient="0.050619942492747455"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_7500000~10000000 &amp; seller_info.e.baoliu_price_bin_50000~75000" coefficient="-0.4152919958562814"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_7500000~10000000 &amp; seller_info.e.baoliu_price_bin_75000~100000" coefficient="0.18039201793764967"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_ &lt;= 25000" coefficient="-1.2571442667356658"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_100000~125000" coefficient="-0.13129869854888854"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_125000~150000" coefficient="1.6234453457886118"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_150000~200000" coefficient="-1.5328425667994012"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_200000~250000" coefficient="-0.9457368609371462"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_250000~300000" coefficient="0.9890626923800688"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_25000~50000" coefficient="-1.065007648019862"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_300000~350000" coefficient="0.33928780886934473"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_350000~400000" coefficient="0.44535396118041315"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_400000~500000" coefficient="-2.2138229645112695"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_500000~600000" coefficient="-0.8511869919284586"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_50000~75000" coefficient="2.8256545893868723"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_75000~100000" coefficient="-0.9244211221579942"/>
+			<NumericPredictor name="car_info.b.guide_price_bin_&gt;60000000 &amp; seller_info.e.baoliu_price_bin_&gt;600000" coefficient="-0.7250651047671929"/>
+			<NumericPredictor name="seller_info.f.seller_auction_cyp_num_bin_ &lt;= 1366 &amp; seller_info.f.seller_auction_cyp_deal_ratio_bin_ &lt;= 0" coefficient="1.6363792666444013"/>
+			<NumericPredictor name="seller_info.f.seller_auction_cyp_num_bin_ &lt;= 1366 &amp; seller_info.f.seller_auction_cyp_deal_ratio_bin_ &gt; 0" coefficient="-1.3531798038081972"/>
+			<NumericPredictor name="seller_info.f.seller_auction_cyp_num_bin_1366~3354 &amp; seller_info.f.seller_auction_cyp_deal_ratio_bin_ &gt; 0" coefficient="-0.3372255304826924"/>
+			<NumericPredictor name="seller_info.f.seller_auction_cyp_num_bin_&gt;3354 &amp; seller_info.f.seller_auction_cyp_deal_ratio_bin_ &lt;= 0" coefficient="0.027757789978600053"/>
+			<NumericPredictor name="seller_info.f.seller_auction_cyp_num_bin_&gt;3354 &amp; seller_info.f.seller_auction_cyp_deal_ratio_bin_ &gt; 0" coefficient="-0.3794760488513428"/>
+		</RegressionTable>
+		<RegressionTable intercept="0.0" targetCategory="0"/>
+	</RegressionModel>
+</PMML>

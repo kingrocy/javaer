@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package com.yunhui.netty.proto;
+
+option java_package = "";
+option java_outer_classname = "TransmissionProtocol";
+option cc_generic_services = true;
+
+
+message TransmissionMsg {
+
+    Type type = 1;
+
+    Status status = 2;
+
+    repeated Request request = 3;
+}
+
+enum Status {
+    SUCCESS = 0;
+    ERROR = 1;
+}
+
+
+enum Type {
+    PING = 0;
+    PONG = 1;
+    REQUEST = 2;
+    RESPONSE = 3;
+}
+
+message Request {
+    string key = 1;
+    string value = 2;
+}
+
+
