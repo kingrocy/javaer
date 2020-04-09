@@ -9,24 +9,42 @@ package com.yunhui.leetcode.easy;
 public class TaskSearchInsert {
 
     /**
-     * 需要考虑头尾的极端值   假如target 应该在头部和尾部时 需要怎么样处理？
+     * 无脑循环  时间复杂度 o(n)
+     *
      * @param nums
      * @param target
      * @return
      */
     public int searchInsert(int[] nums, int target) {
-        int index = 0;
         for (int i = 0; i < nums.length; i++) {
-            if (nums[i] == target) {
+            if (nums[i] >= target) {
                 return i;
-            } else if (nums[i] >= target) {
-                if (index == 0) {
-                    index = i - 1;
-                }
-            } else {
-                index = i + 1;
             }
         }
-        return index<0?0:index;
+        return nums.length;
+    }
+
+    /**
+     * 二分查找
+     *
+     * @param nums
+     * @param target
+     * @return
+     */
+    public int searchInsert2(int[] nums, int target) {
+        int left = 0;
+        int right = nums.length - 1;
+        while (left <= right) {
+            int mid = (left + right) / 2;
+            if (nums[mid] == target) {
+                return mid;
+            } else if (nums[mid] > target) {
+                right = mid - 1;
+            } else {
+                left = mid + 1;
+            }
+        }
+        //为什么最后返回的是left？？？
+        return left;
     }
 }
