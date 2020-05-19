@@ -28,6 +28,8 @@
         <module>protobuf</module>
         <module>netty-protobuf</module>
         <module>delay-queue</module>
+        <module>kafka</module>
+        <module>calcite</module>
     </modules>
 
     <dependencies>

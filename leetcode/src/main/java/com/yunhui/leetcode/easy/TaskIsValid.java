@@ -16,7 +16,6 @@ public class TaskIsValid {
             add('[');
             add('{');
         }};
-
         Map<Character,Character> map=new HashMap(3){
             {
                 put(')', '(');
@@ -24,7 +23,6 @@ public class TaskIsValid {
                 put('}', '{');
             }
         };
-
         Stack stack=new Stack();
         for (Character c : s.toCharArray()) {
             if(ins.contains(c)){
@@ -57,6 +55,6 @@ public class TaskIsValid {
     }
 
     public static void main(String[] args) {
-        System.out.println(isValid("({[}])"));
+        System.out.println(isValidNew("({})[]"));
     }
 }

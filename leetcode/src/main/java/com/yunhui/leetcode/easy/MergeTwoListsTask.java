@@ -1,7 +1,5 @@
 package com.yunhui.leetcode.easy;
 
-import lombok.val;
-
 /**
  * @Date : 2020/3/19 3:31 下午
  * @Author : dushaoyun
