@@ -30,6 +30,7 @@
         <module>delay-queue</module>
         <module>kafka</module>
         <module>calcite</module>
+        <module>bloom-filter</module>
     </modules>
 
     <dependencies>

@@ -51,7 +51,7 @@ public class SortAnalyze {
 
         long startTime2=System.currentTimeMillis();
 
-        FastSort.sort(array2,0,array2.length-1);
+        FastSort.quickSort(array2,0,array2.length-1);
 
         long endTime2=System.currentTimeMillis();
 
