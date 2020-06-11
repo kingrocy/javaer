@@ -1,4 +1,4 @@
-package com.yunhui.base.sort;
+package com.yunhui.base.lru;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -7,11 +7,11 @@ import java.util.Map;
  * @Date : 2020/6/2 2:43 下午
  * @Author : dushaoyun
  */
-public class LRUCache {
+public class LRUCacheUsingLinkedHashMap {
 
     private LinkedHashMap<String, Integer> data;
 
-    public LRUCache(int capacity) {
+    public LRUCacheUsingLinkedHashMap(int capacity) {
         data = new LinkedHashMap<String, Integer>(capacity, 0.75f, true) {
             @Override
             protected boolean removeEldestEntry(Map.Entry eldest) {
