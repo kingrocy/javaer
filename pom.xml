@@ -32,6 +32,7 @@
         <module>calcite</module>
         <module>bloom-filter</module>
         <module>antlr4</module>
+        <module>sqlparse</module>
     </modules>
 
     <dependencies>
