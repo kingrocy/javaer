@@ -5,10 +5,28 @@ package com.yunhui.leetcode.hot;
  * @Author : dushaoyun
  */
 public class ListNode {
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
 
-    ListNode(int x) {
+    public ListNode(int x) {
         val = x;
+    }
+
+    public ListNode(int x, ListNode next) {
+        this.val = x;
+        this.next = next;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(val);
+        ListNode p = next;
+        while (p != null) {
+            sb.append("->");
+            sb.append(p.val);
+            p = p.next;
+        }
+        return sb.toString();
     }
 }
