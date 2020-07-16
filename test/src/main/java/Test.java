@@ -15,7 +15,14 @@ public class Test {
     static final int MAXIMUM_CAPACITY = 1 << 30;
 
 
+    @org.junit.Test
+    public void  test(){
+        Map<String,String> map=new HashMap<>();
+        map.put("hello", "world");
 
+        System.out.println(0x7fffffff);
+        System.out.println(Integer.MAX_VALUE);
+    }
 
     @org.junit.Test
     public void test1(){
