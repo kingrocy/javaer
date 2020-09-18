@@ -1,11 +1,14 @@
-package com.yunhui.leetcode.byte_dance;
+package com.yunhui.leetcode.byte_dance.string;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 /**
  * @Date : 2020/9/9 5:12 下午
  * @Author : dushaoyun
+ * @link https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/
  */
 public class LengthOfLongestSubstring {
 
@@ -41,8 +44,8 @@ public class LengthOfLongestSubstring {
         int j = 0;
         L1:
         for (int i = 0; i < chars.length; i++) {
-            if(i!=0){
-                set.remove(chars[i-1]);
+            if (i != 0) {
+                set.remove(chars[i - 1]);
             }
             L2:
             for (int k = j; k < chars.length; k++) {
@@ -57,6 +60,35 @@ public class LengthOfLongestSubstring {
         }
         return max;
     }
+
+
+    /**
+     * 滑动窗口
+     * @param s
+     * @return
+     */
+    public static int lengthOfLongestSubstring3(String s) {
+        if (s == null || s.length() == 0) {
+            return 0;
+        }
+        Map<Character, Integer> window = new HashMap<>();
+        int left = 0;
+        int right = 0;
+        int max = 0;
+        while (right < s.length()) {
+            char c = s.charAt(right);
+            right++;
+            window.put(c, window.getOrDefault(c, 0) + 1);
+            while (window.get(c) > 1) {
+                char d = s.charAt(left);
+                left++;
+                window.put(d, window.get(d) - 1);
+            }
+            max = Math.max(max, right - left);
+        }
+        return max;
+    }
+
 
     public static void main(String[] args) {
         System.out.println(lengthOfLongestSubstring2("\"abcabcbb"));
