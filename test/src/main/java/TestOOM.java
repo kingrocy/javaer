@@ -10,8 +10,11 @@ public class TestOOM {
     public static void main(String[] args) throws InterruptedException {
         List list=new ArrayList();
         for (int i = 0; i < Integer.MAX_VALUE; i++) {
-            Thread.sleep(200);
-            list.add(new byte[1024*1024*8]);
+            Thread.sleep(500);
+            list.add(new byte[1024*1024]);
+        }
+        while (true){
+
         }
     }
 }
