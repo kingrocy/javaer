@@ -1,4 +1,6 @@
-package com.yunhui.leetcode.easy;
+package com.yunhui.leetcode.tree;
+
+import com.yunhui.leetcode.tree.TreeNode;
 
 /**
  * @Date : 2020/4/28 10:37 上午
@@ -6,7 +8,7 @@ package com.yunhui.leetcode.easy;
  * @link https://leetcode-cn.com/problems/symmetric-tree/
  * @desc 判断一棵二叉树是否是对称的
  */
-public class TaskIsSymmetric {
+public class IsSymmetric {
 
     public boolean isSymmetric(TreeNode root) {
         return isMirror(root, root);

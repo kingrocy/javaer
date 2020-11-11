@@ -1,4 +1,4 @@
-package com.yunhui.leetcode.easy;
+package com.yunhui.leetcode.linklist;
 
 /**
  * @Date : 2020/3/19 3:31 下午
@@ -38,14 +38,5 @@ public class MergeTwoListsTask {
             res.next=p;
         }
         return result.next;
-    }
-}
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
     }
 }

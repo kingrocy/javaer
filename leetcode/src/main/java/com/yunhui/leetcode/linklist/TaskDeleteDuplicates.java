@@ -1,6 +1,6 @@
-package com.yunhui.leetcode.easy;
+package com.yunhui.leetcode.linklist;
 
-import lombok.val;
+import com.yunhui.leetcode.linklist.ListNode;
 
 /**
  * @Date : 2020/4/10 10:12 上午

@@ -1,4 +1,4 @@
-package com.yunhui.leetcode.easy;
+package com.yunhui.leetcode.tree;
 
 /**
  * @Date : 2020/5/6 9:59 上午
@@ -6,11 +6,11 @@ package com.yunhui.leetcode.easy;
  * @link  https://leetcode-cn.com/problems/convert-sorted-array-to-binary-search-tree/
  * @desc 把一个有序数组转换为二叉搜索树
  */
-public class TaskSortedArrayToBST {
+public class SortedArrayToBST {
 
     int[] nums;
 
-    public TreeNode process(int left,int right){
+    public TreeNode process(int left, int right){
         if(left>right){
             return null;
         }

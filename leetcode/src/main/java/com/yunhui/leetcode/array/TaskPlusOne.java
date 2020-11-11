@@ -1,4 +1,4 @@
-package com.yunhui.leetcode.easy;
+package com.yunhui.leetcode.array;
 
 /**
  * @Date : 2020/4/9 2:28 下午

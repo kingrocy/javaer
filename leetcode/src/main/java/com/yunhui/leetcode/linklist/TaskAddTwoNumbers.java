@@ -1,4 +1,4 @@
-package com.yunhui.leetcode.medium;
+package com.yunhui.leetcode.linklist;
 
 /**
  * @Date : 2019-09-11 16:55
@@ -30,15 +30,5 @@ public class TaskAddTwoNumbers {
             cur.next = new ListNode(num);
         }
         return result.next;
-    }
-}
-
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
     }
 }

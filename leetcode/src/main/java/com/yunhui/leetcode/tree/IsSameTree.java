@@ -1,11 +1,11 @@
-package com.yunhui.leetcode.easy;
+package com.yunhui.leetcode.tree;
 
 /**
  * @Date : 2020/4/26 2:49 下午
  * @Author : dushaoyun
  * @link https://leetcode-cn.com/problems/same-tree/
  */
-public class TaskIsSameTree {
+public class IsSameTree {
 
     /**
      * 判断两棵树是否相同
@@ -32,12 +32,4 @@ public class TaskIsSameTree {
     }
 }
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
 
-    TreeNode(int x) {
-        val = x;
-    }
-}

@@ -1,4 +1,6 @@
-package com.yunhui.leetcode.easy;
+package com.yunhui.leetcode.tree;
+
+import com.yunhui.leetcode.tree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -11,7 +13,7 @@ import java.util.Queue;
  * @Desc 傻瓜式解法   二叉树的层次遍历
  * @link https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii/
  */
-public class TaskLevelOrderBottom {
+public class LevelOrderBottom {
 
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
         List<List<Integer>> resultList = new LinkedList<>();
