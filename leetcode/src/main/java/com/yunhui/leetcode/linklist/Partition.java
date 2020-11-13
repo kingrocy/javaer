@@ -1,7 +1,5 @@
 package com.yunhui.leetcode.linklist;
 
-import com.yunhui.leetcode.hot.ListNode;
-
 /**
  * @Date : 2020/7/1 10:35 上午
  * @Author : dushaoyun

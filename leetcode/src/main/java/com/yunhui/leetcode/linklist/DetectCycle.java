@@ -1,7 +1,5 @@
 package com.yunhui.leetcode.linklist;
 
-import com.yunhui.leetcode.hot.ListNode;
-
 import java.util.HashSet;
 import java.util.Set;
 
