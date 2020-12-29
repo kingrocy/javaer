@@ -13,11 +13,10 @@ public class MinStack {
     }
 
     public void push(int x) {
-        ListNode node = new ListNode(x);
         if (stack == null) {
-            stack = node;
+            stack = new ListNode(x, x);
         } else {
-            node.next = stack;
+            ListNode node = new ListNode(x, Math.min(x, stack.min), stack);
             stack = node;
         }
     }
@@ -33,29 +32,25 @@ public class MinStack {
     }
 
     public int getMin() {
-        int min = stack.val;
-        ListNode cur = stack.next;
-        while (cur != null) {
-            if(cur.val<min){
-                min=cur.val;
-            }
-            cur=cur.next;
-        }
-        return min;
+        return stack.min;
     }
 
     public static class ListNode {
 
         private int val;
 
+        private int min;
+
         private ListNode next;
 
-        public ListNode(int val) {
+        public ListNode(int val, int min) {
             this.val = val;
+            this.min = min;
         }
 
-        public ListNode(int val, ListNode next) {
+        public ListNode(int val, int min, ListNode next) {
             this.val = val;
+            this.min = min;
             this.next = next;
         }
     }
