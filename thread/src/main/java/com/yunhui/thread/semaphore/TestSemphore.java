@@ -11,7 +11,6 @@ public class TestSemphore {
     public static void main(String[] args) {
         TestSemphore print = new TestSemphore();
         print.print1();
-
     }
 
     public void print1() {
