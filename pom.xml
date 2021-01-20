@@ -35,6 +35,7 @@
         <module>sqlparse</module>
         <module>hbase</module>
         <module>design-pattern</module>
+        <module>redis</module>
     </modules>
 
     <dependencies>
