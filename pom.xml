@@ -36,6 +36,7 @@
         <module>hbase</module>
         <module>design-pattern</module>
         <module>redis</module>
+        <module>dynamic_proxy</module>
     </modules>
 
     <dependencies>
