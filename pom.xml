@@ -37,6 +37,7 @@
         <module>design-pattern</module>
         <module>redis</module>
         <module>dynamic_proxy</module>
+        <module>mysql_load_data</module>
     </modules>
 
     <dependencies>
