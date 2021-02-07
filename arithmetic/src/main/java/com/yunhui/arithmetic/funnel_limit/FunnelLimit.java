@@ -5,7 +5,7 @@ import java.util.Random;
 /**
  * @Date : 2020/10/22 10:06 上午
  * @Author : dushaoyun
- * @Desc ：漏斗限流
+ * @Desc ：令牌桶限流
  * <p>
  * 场景：限制用户 每秒可以进行几次操作
  */

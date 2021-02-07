@@ -17,15 +17,8 @@ public class TestSemphore {
         //奇数信号量  打印偶数的线程负责释放
         Semaphore jsemaphore = new Semaphore(1);
         //偶数信号量  打印奇数的线程负责释放
-        Semaphore osemaphore = new Semaphore(1);
-        //先打印奇数
-        try {
-            osemaphore.acquire();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        Semaphore osemaphore = new Semaphore(0);
         new Thread(() -> {
-
             for (int i = 1; i <= 100; i++) {
                 if (i % 2 == 1) {
                     try {
