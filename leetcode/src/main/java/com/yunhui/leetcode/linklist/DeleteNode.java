@@ -14,20 +14,6 @@ public class DeleteNode {
         node1.next = node2;
         node2.next = node3;
         System.out.println(node1);
-
-        deleteNode2(node1);
-        System.out.println(node1);
-
-        ListNode node4 = new ListNode(4);
-        ListNode node5 = new ListNode(5);
-        node3.next = node4;
-        node4.next = node5;
-        System.out.println(node1);
-
-
-        deleteNode2(node1);
-        System.out.println(node1);
-
     }
 
     /**
@@ -39,25 +25,5 @@ public class DeleteNode {
     public void deleteNode(ListNode node) {
         node.val = node.next.val;
         node.next = node.next.next;
-    }
-
-    /**
-     * 给定链表node，当node的节点数为单数时，返回中间的节点。如果node的节点数为复数，返回中间偏左的节点。
-     *
-     * @param node
-     */
-    public static void deleteNode2(ListNode node) {
-        ListNode head = new ListNode(0);
-        head.next = node;
-        ListNode fast = head;
-        ListNode low = head;
-        ListNode pre = null;
-        while (low != null && low.next != null) {
-            pre = fast;
-            fast = fast.next;
-            low = low.next.next;
-        }
-        //fast为链表中间的节点  删除
-        pre.next = fast.next;
     }
 }

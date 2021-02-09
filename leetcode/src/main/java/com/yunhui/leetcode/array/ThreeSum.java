@@ -17,28 +17,33 @@ public class ThreeSum {
 
     /**
      * 先排序 再双指针
+     *
      * @param nums
      * @return
      */
     public static List<List<Integer>> threeSum(int[] nums) {
-        List<List<Integer>> res = new ArrayList<>();
-        if (nums == null || nums.length < 3) {
-            return res;
+        List<List<Integer>> arr = new ArrayList<List<Integer>>();
+        if (nums.length < 3) {
+            return arr;
         }
+        //排序
         Arrays.sort(nums);
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] > 0) {
-                break;
-            }
+        if (nums[0] > 0) {
+            return arr;
+        }
+        for (int i = 0; i < nums.length - 2; i++) {
+            int target = 0 - nums[i];
+            //去重
             if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
             }
             int l = i + 1;
             int r = nums.length - 1;
             while (l < r) {
-                int sum = nums[i] + nums[l] + nums[r];
-                if (sum == 0) {
-                    res.add(Arrays.asList(nums[i], nums[l], nums[r]));
+                if (nums[l] + nums[r] == target) {
+                    //存入符合要求的值
+                    arr.add(new ArrayList<>(Arrays.asList(nums[i], nums[l], nums[r])));
+                    //这里需要注意顺序
                     while (l < r && nums[l] == nums[l + 1]) {
                         l++;
                     }
@@ -47,15 +52,13 @@ public class ThreeSum {
                     }
                     l++;
                     r--;
+                } else if (nums[l] + nums[r] > target) {
+                    r--;
                 } else {
-                    if (sum < 0) {
-                        l++;
-                    } else {
-                        r--;
-                    }
+                    l++;
                 }
             }
         }
-        return res;
+        return arr;
     }
 }

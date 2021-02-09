@@ -1,5 +1,8 @@
 package com.yunhui.leetcode.array;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @Date : 2020/6/29 4:02 下午
  * @Author : dushaoyun
@@ -91,5 +94,21 @@ public class FirstMissingPositive {
             }
         }
         return nums.length + 1;
+    }
+
+
+    public int firstMissingPositive4(int[] nums) {
+        Map<Integer, Integer> dict = new HashMap<>();
+        for (int num : nums) {
+            dict.put(num, num);
+        }
+        int i = 1;
+        while (true) {
+            if (!dict.containsKey(i)) {
+                return i;
+            } else {
+                i++;
+            }
+        }
     }
 }
