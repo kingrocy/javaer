@@ -22,17 +22,6 @@ public class FindKthLargest {
             return -1;
         }
         Arrays.sort(nums);
-        int i = nums.length - 1;
-        int n = 1;
-        while (i >= 1) {
-            if (n == k) {
-                return nums[i];
-            }
-            if (nums[i] != nums[i - 1]) {
-                n++;
-            }
-            i--;
-        }
-        return -1;
+        return nums[nums.length - k];
     }
 }
