@@ -4,3 +4,39 @@
 题目：CheckInclusion、LengthOfLongestSubstring、FindAnagrams、MinWindow
 
 
+
+ public void slidingWindow(String s,String t){
+        Map<Character, Integer> need = new HashMap<>();
+        Map<Character, Integer> window = new HashMap<>();
+        for (char c : t.toCharArray()) {
+            need.compute(c, (k, oldValue) -> oldValue == null ? 1 : oldValue + 1);
+        }
+        int left = 0;
+        int right = 0;
+        int valid = 0;
+        while (right < s.length()) {
+            // c 是将移入窗口的字符
+            char c = s.charAt(right);
+            right++;
+            // 进行窗口内数据的一系列更新
+//            if (need.containsKey(c)) {
+//                window.compute(c, (k, oldValue) -> oldValue == null ? 1 : oldValue + 1);
+//                if (need.get(c).equals(window.get(c))) {
+//                    valid++;
+//                }
+//            }
+            //判断左侧窗口是否要收缩
+            while (valid == need.size()) {
+                // d 是将移出窗口的字符
+                char d = s.charAt(left);
+                left++;
+                // 进行窗口内数据的一系列更新
+//                if (need.containsKey(d)) {
+//                    if (window.get(d).equals(need.get(d))) {
+//                        valid--;
+//                    }
+//                    window.put(d, window.get(d) - 1);
+//                }
+            }
+        }
+    }
