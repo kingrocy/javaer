@@ -1,6 +1,8 @@
 package com.yunhui.leetcode.array;
 
 import java.util.Arrays;
+import java.util.Comparator;
+import java.util.PriorityQueue;
 
 /**
  * @Date : 2021/2/9 8:39 下午
@@ -24,4 +26,21 @@ public class FindKthLargest {
         Arrays.sort(nums);
         return nums[nums.length - k];
     }
+
+
+    /**
+     * 使用优先级队列来做  队列里面 元素从小到大排列 只存储k个元素 队列的头部元素 就是第K个最大元素
+     */
+    public int findKthLargest2(int[] nums, int k) {
+        PriorityQueue<Integer> queue = new PriorityQueue<>(Comparator.comparingInt(x -> x));
+        for (int num : nums) {
+            queue.add(num);
+            if(queue.size()>k){
+                queue.poll();
+            }
+        }
+        return queue.poll();
+    }
+
+
 }
