@@ -1,4 +1,4 @@
-package com.yunhui.design.pattern.demo2;
+package com.yunhui.design.pattern.factory;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;

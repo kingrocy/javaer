@@ -3,6 +3,7 @@ package com.yunhui.redis;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
@@ -25,14 +26,13 @@ public class RedisTest {
         JedisPoolConfig config = new JedisPoolConfig();
         config.setMaxTotal(10);
         config.setMaxIdle(10);
-        jedisPool = new JedisPool(config, "test.database7300.scsite.net", 7300, 1000);
+        jedisPool = new JedisPool(config, "127.0.0.1", 6379, 1000);
     }
 
     @Before
     public void init() {
         initialPool();
         jedis = jedisPool.getResource();
-        jedis.auth("lvEfWo2KTEssPg93");
     }
 
     @After
@@ -48,12 +48,13 @@ public class RedisTest {
     @Test
     public void testPipelined() {
         Pipeline pipelined = jedis.pipelined();
-        String zkey = "hello";
-        for (int i = 0; i < 200; i++) {
-            pipelined.zadd(zkey, i, zkey + i);
+        String key = "hello";
+        int start = 10000;
+        String value = "helloworld";
+        for (int i = 0; i < 100000; i++) {
+            pipelined.set(key + start++, value);
         }
         pipelined.sync();
     }
-
 
 }

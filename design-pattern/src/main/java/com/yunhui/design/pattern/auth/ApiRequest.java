@@ -1,4 +1,4 @@
-package com.yunhui.design.pattern.demo1;
+package com.yunhui.design.pattern.auth;
 
 import lombok.Getter;
 

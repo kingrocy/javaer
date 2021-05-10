@@ -1,6 +1,4 @@
-package com.yunhui.design.pattern.demo1;
-
-import java.util.Map;
+package com.yunhui.design.pattern.auth;
 
 /**
  * @Date : 2020/12/18 3:59 下午

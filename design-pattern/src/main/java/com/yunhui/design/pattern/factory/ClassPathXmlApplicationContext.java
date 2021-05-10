@@ -1,4 +1,4 @@
-package com.yunhui.design.pattern.demo2;
+package com.yunhui.design.pattern.factory;
 
 import java.io.IOException;
 import java.io.InputStream;

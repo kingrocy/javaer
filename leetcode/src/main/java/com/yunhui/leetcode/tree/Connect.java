@@ -24,7 +24,7 @@ public class Connect {
             return;
         }
         connectNode(left.left,left.right);
-        connectNode(left.left,right.left);
+        connectNode(left.right,right.left);
         connectNode(right.left,right.right);
     }
 }
