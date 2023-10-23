@@ -38,13 +38,14 @@
         <module>redis</module>
         <module>dynamic_proxy</module>
         <module>mysql_load_data</module>
+        <module>easy-excel</module>
     </modules>
 
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.4</version>
+            <version>1.18.20</version>
         </dependency>
 
         <dependency>
