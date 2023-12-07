@@ -26,11 +26,13 @@ public class FIleParse {
             BufferedReader br = new BufferedReader(new FileReader("/Users/dushaoyun/kuaishou/work/workspace/souche "
                     + "backup/workspace/java/yun/javaer/test/src/main/resources/test.file"));
 
-            Set<Long> userIdList = Sets.newHashSet();
+            Set<Long> cateId_1 = Sets.newHashSet();
+            Set<Long> cateId_2 = Sets.newHashSet();
+            Set<Long> cateId_3 = Sets.newHashSet();
 
-            Set<String> deviceIdList = Sets.newHashSet();
+            Set<Long> itemIds = Sets.newHashSet();
+            Set<Long> promoters = Sets.newHashSet();
 
-            Set<String> modList = Sets.newHashSet();
 
             // read until end of file
             String line;
@@ -47,28 +49,22 @@ public class FIleParse {
 
 
                     int start = msg.indexOf("{");
-                    int end = msg.indexOf("com.kuaishou.encryptid.exception.DecryptIdCommonException");
+                    int end = msg.indexOf("response");
 
                     String substring = msg.substring(start, end);
 
                     JSONObject object = JSON.parseObject(substring);
 
-                    JSONObject clientRequestInfo = object.getJSONObject("clientRequestInfo");
+                    String attributes = object.getString("attributes");
 
-                    Long userId = clientRequestInfo.getLong("userId");
+                    DeliveryRecallAttribute deliveryRecallAttribute = JSON.parseObject(attributes, DeliveryRecallAttribute.class);
 
+                    cateId_1.add(deliveryRecallAttribute.getCate1_id());
+                    cateId_2.add(deliveryRecallAttribute.getCate3_id());
+                    cateId_3.add(deliveryRecallAttribute.getLeaf_cate_id());
 
-                    userIdList.add(userId);
-
-                    String deviceId = clientRequestInfo.getString("deviceId");
-
-
-                    deviceIdList.add(deviceId);
-
-
-                    String logtime = source.getString("logtime");
-
-                    modList.add(Joiner.on(" ").join(logtime, userId));
+                    itemIds.add(deliveryRecallAttribute.getItem_id());
+                    promoters.add(deliveryRecallAttribute.getPromoter_id());
                 }
 
             }
@@ -76,18 +72,37 @@ public class FIleParse {
             // close the reader
             br.close();
 
-            //            for (Long userId : userIdList) {
-            //                System.out.println(userId);
+            //            System.out.println("一级类目id：========================开始===========================");
+            //            for (Long mod : cateId_1) {
+            //                System.out.println(mod);
             //            }
-
+            //            System.out.println("一级类目id：========================结束===========================");
             //
-            //            for (String deviceId : deviceIdList) {
-            //                System.out.println(deviceId);
+            //
+            //            System.out.println("二级类目id：========================开始===========================");
+            //            for (Long mod : cateId_2) {
+            //                System.out.println(mod);
             //            }
+            //            System.out.println("二级类目id：========================结束===========================");
+            //
+            //            System.out.println("叶子类目id：========================开始===========================");
+            //            for (Long mod : cateId_3) {
+            //                System.out.println(mod);
+            //            }
+            //            System.out.println("叶子类目id：========================结束===========================");
 
-            for (String mod : modList) {
+
+            System.out.println("商品id：========================开始===========================");
+            for (Long mod : itemIds) {
                 System.out.println(mod);
             }
+            System.out.println("商品id：========================结束===========================");
+
+            System.out.println("达人：：========================开始===========================");
+            for (Long mod : promoters) {
+                System.out.println(mod);
+            }
+            System.out.println("达人：========================结束===========================");
 
         } catch (IOException ex) {
             ex.printStackTrace();

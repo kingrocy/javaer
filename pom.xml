@@ -39,6 +39,8 @@
         <module>dynamic_proxy</module>
         <module>mysql_load_data</module>
         <module>easy-excel</module>
+        <module>pipline</module>
+        <module>reflection</module>
     </modules>
 
     <dependencies>

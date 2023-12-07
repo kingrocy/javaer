@@ -13,11 +13,11 @@ public class RevertLinkedfList {
         System.out.println(revert);
     }
 
+    //头插法
     public static Node revert(Node node) {
         Node res = null;
-        Node p = node;
         Node next;
-        //遍历老链表  将每个节点用头插法的方式插到新链表 即反转了
+        Node p = node;
         while (p != null) {
             next = p.next;
             p.next = res;
