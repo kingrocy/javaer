@@ -43,6 +43,5 @@ public class TaskIsPalindrome {
     public static void main(String[] args) {
 //        System.out.println(isPalindrome1(-121));
         System.out.println(isPalindrome2(-121));
-
     }
 }

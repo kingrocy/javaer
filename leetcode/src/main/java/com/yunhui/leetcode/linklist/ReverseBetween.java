@@ -9,9 +9,9 @@ public class ReverseBetween {
 
 
     public static void main(String[] args) {
-        ListNode head = new ListNode(1, new ListNode(4, new ListNode(3, new ListNode(2, new ListNode(5, new ListNode(2))))));
+        ListNode head = new ListNode(5);
         System.out.println(head);
-        ListNode reverseBetween = reverseBetween(head, 1, 6);
+        ListNode reverseBetween = reverseBetween(head, 1, 1);
         System.out.println(reverseBetween);
     }
 
@@ -28,23 +28,20 @@ public class ReverseBetween {
         if (head == null || head.next == null) {
             return head;
         }
-        //使用一个虚拟头节点 来避免链表从头开始反转导致的空指针异常
         ListNode dummyNode = new ListNode(0);
         dummyNode.next = head;
-        ListNode m_pre = dummyNode;
-        ListNode m_ = dummyNode.next;
-        int i = 1;
-        while (i < m) {
-            m_pre = m_pre.next;
-            m_ = m_.next;
-            i++;
+        ListNode pre = dummyNode;
+        ListNode cur = dummyNode.next;
+        for (int i = 1; i < m; i++) {
+            pre = pre.next;
+            cur = cur.next;
         }
-        ListNode revertNode;
+        ListNode q;
         for (int j = 0; j < n - m; j++) {
-            revertNode = m_.next;
-            m_.next = revertNode.next;
-            revertNode.next = m_pre.next;
-            m_pre.next = revertNode;
+            q = cur.next;
+            cur.next = q.next;
+            q.next = pre.next;
+            pre.next = q;
         }
         return dummyNode.next;
     }

@@ -1,15 +1,12 @@
-package com.yunhui.leetcode.array;
+package com.yunhui.leetcode.hot_100;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Date : 2020/8/10 5:40 下午
- * @Author : dushaoyun
- * @link https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/
+ * Created on 2024-01-05
  */
-public class TwoSum2 {
-
+public class TwoSum {
 
     public int[] twoSum(int[] nums, int target) {
         int[] res = new int[2];
