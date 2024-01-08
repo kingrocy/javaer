@@ -39,4 +39,33 @@ public class LongestConsecutive {
         }
         return max;
     }
+
+    public static int longestConsecutive2(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
+        if (nums.length == 1) {
+            return 1;
+        }
+        Arrays.sort(nums);
+        int left = 0;
+        int right = left + 1;
+        int count = 1;
+        int max = 1;
+        while (right < nums.length) {
+            if (nums[right] == nums[right - 1]) {
+                //如果两个数字相等，需要跳过
+                right++;
+            } else if (nums[right] == nums[right - 1] + 1) {
+                right++;
+                count++;
+                max = Math.max(count, max);
+            } else {
+                left = right;
+                right = left + 1;
+                count = 1;
+            }
+        }
+        return max;
+    }
 }
