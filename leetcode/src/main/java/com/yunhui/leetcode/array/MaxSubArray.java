@@ -48,6 +48,8 @@ public class MaxSubArray {
                 sum = num;
             }
             ans = Math.max(ans, sum);
+
+            //0 5 2 -5 17 -3 -5 -2
         }
         return ans;
     }
