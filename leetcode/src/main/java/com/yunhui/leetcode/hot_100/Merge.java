@@ -11,7 +11,6 @@ import com.alibaba.fastjson.JSON;
 public class Merge {
 
     /**
-     * 垃圾题目，，[2,3],[4,5]竟然算一个重叠区间，qnmd
      * @param intervals
      * @return
      */

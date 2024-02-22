@@ -7,7 +7,7 @@ package com.yunhui.base.search;
 public class BinarySearch {
 
     public static void main(String[] args) {
-        System.out.println(binarySearch(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 8, 9, 10}, 2));
+        System.out.println(binarySearch(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 8, 9, 10}, 2));
     }
 
     public static int binarySearch(int[] nums, int target) {
@@ -42,11 +42,12 @@ public class BinarySearch {
                 right = mid - 1;
             }
         }
-        // 最后要检查 left 越界的情况
-        if (left >= nums.length || nums[left] != target) {
+        // 判断 target 是否存在于 nums 中
+        if (left < 0 || left >= nums.length) {
             return -1;
         }
-        return left;
+        // 判断一下 nums[left] 是不是 target
+        return nums[left] == target ? left : -1;
     }
 
     int right_bound(int[] nums, int target) {
@@ -62,11 +63,17 @@ public class BinarySearch {
                 left = mid + 1;
             }
         }
-        // 最后要检查 right 越界的情况
-        if (right < 0 || nums[right] != target) {
+        // 判断 target 是否存在于 nums 中
+        // if (left - 1 < 0 || left - 1 >= nums.length) {
+        //     return -1;
+        // }
+
+        // 由于 while 的结束条件是 right == left - 1，且现在在求右边界
+        // 所以用 right 替代 left - 1 更好记
+        if (right < 0 || right >= nums.length) {
             return -1;
         }
-        return right;
+        return nums[right] == target ? right : -1;
     }
 
 }
