@@ -37,10 +37,39 @@ public class Rotate {
         }
     }
 
+
+    public void rotate2(int[] nums, int k) {
+        if (nums == null || nums.length == 0) {
+            return;
+        }
+        if (k <= 0) {
+            return;
+        }
+        //如果需要轮转的次数大于数字的大小 则进行取余 （因为对于一个长度n的数组，轮转n次后的顺序等于没有轮转）
+        if (k > nums.length) {
+            k = k % nums.length;
+        }
+        reverse(nums, 0, nums.length - 1);
+        reverse(nums, 0, k - 1);
+        reverse(nums, k, nums.length - 1);
+    }
+
+
+    private void reverse(int[] nums, int left, int right) {
+        while (left < right) {
+            int temp = nums[left];
+            nums[left] = nums[right];
+            nums[right] = temp;
+            left++;
+            right--;
+        }
+    }
+
+
     public static void main(String[] args) {
         int[] nums = new int[] {1, 2, 3, 4, 5};
         int k = 3;
-        new Rotate().rotate(nums, k);
+        new Rotate().rotate2(nums, k);
         for (int i = 0; i < nums.length; i++) {
             System.out.println(nums[i]);
         }

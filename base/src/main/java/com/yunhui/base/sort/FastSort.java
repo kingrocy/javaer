@@ -49,11 +49,11 @@ public class FastSort {
 
         //上面一个while保证了第一趟排序支点的左边比支点小，支点的右边比支点大了。
         //“左边”再做排序，直到左边剩下一个数(递归出口)
-        if (L < j) {
+        if (L < i) {
             quickSort(arr, L, j);
         }
         //“右边”再做排序，直到右边剩下一个数(递归出口)
-        if (i < R) {
+        if (j < R) {
             quickSort(arr, i, R);
         }
     }
